@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g fill="#FDBF57">
+    <rect x="14" y="2" width="5" height="9" rx="1"/><rect x="29.5" y="2" width="5" height="9" rx="1"/><rect x="45" y="2" width="5" height="9" rx="1"/>
+    <rect x="14" y="53" width="5" height="9" rx="1"/><rect x="29.5" y="53" width="5" height="9" rx="1"/><rect x="45" y="53" width="5" height="9" rx="1"/>
+  </g>
+  <rect x="6" y="9" width="52" height="46" rx="7" fill="#7A003C"/>
+  <circle cx="14" cy="17" r="2.5" fill="#FDBF57"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#FFFFFF">YS</text>
+</svg>

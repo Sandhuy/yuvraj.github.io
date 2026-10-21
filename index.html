@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuvraj Sandhu · Embedded Hardware &amp; Firmware Engineer</title>
+  <meta name="description" content="Yuvraj Sandhu: Computer Engineering &amp; Management student at McMaster University (graduating December 2026) working across PCB design, embedded firmware, RF and hardware-in-the-loop test systems.">
+  <meta name="author" content="Yuvraj Sandhu">
+  <meta name="theme-color" content="#F7F3EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141016" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph. TODO: once deployed, set og:url and add og:image (1200×630 PNG/JPG, absolute URL). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yuvraj Sandhu · Embedded Hardware &amp; Firmware Engineer">
+  <meta property="og:description" content="PCB design, embedded firmware, RF and hardware-in-the-loop test systems. McMaster Computer Engineering &amp; Management, Dec 2026.">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Set the saved theme before first paint so there is no light/dark flash. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuvraj Sandhu",
+    "jobTitle": "Embedded Hardware Design Engineer",
+    "worksFor": { "@type": "Organization", "name": "Recon Intelligence Corporation" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "McMaster University" },
+    "email": "mailto:yuvrajsandhu676@gmail.com",
+    "sameAs": ["https://github.com/Sandhuy"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================== HEADER / NAV ============================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a class="brand" href="#top" aria-label="Yuvraj Sandhu, back to top">
+        <span class="brand-chip" aria-hidden="true">YS</span>
+        <span class="brand-name">Yuvraj Sandhu</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#coursework">Coursework</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="hero-traces" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-20 90 H180 L240 150 H420"/>
+          <path d="M-20 130 H150 L210 190 H300 L330 220 V320"/>
+          <path d="M1220 80 H1010 L960 130 H860"/>
+          <path d="M1220 120 H1040 L990 170 V260 L1030 300 H1120"/>
+          <path d="M-20 600 H120 L180 540 H360 L400 500"/>
+          <path d="M1220 640 H980 L930 590 H760"/>
+          <path d="M1220 590 H1060 L1010 540 V470"/>
+          <path d="M600 720 V660 L640 620 H720"/>
+        </g>
+        <g class="vias">
+          <circle cx="420" cy="150" r="6"/><circle cx="330" cy="320" r="6"/>
+          <circle cx="860" cy="130" r="6"/><circle cx="1120" cy="300" r="6"/>
+          <circle cx="400" cy="500" r="6"/><circle cx="760" cy="590" r="6"/>
+          <circle cx="1010" cy="470" r="6"/><circle cx="720" cy="620" r="6"/>
+        </g>
+      </svg>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status">
+            <span class="led" aria-hidden="true"></span>
+            Now: Embedded Hardware Design Engineer at Recon Intelligence
+          </p>
+          <h1 id="hero-title" class="hero-title">Yuvraj<br>Sandhu</h1>
+          <p class="hero-role">Embedded hardware&nbsp;· firmware&nbsp;· test systems</p>
+          <p class="hero-lede">
+            I design boards, write the firmware that runs on them, and build the test
+            rigs that prove they work. Fifth-year Computer Engineering &amp; Management
+            at McMaster University, graduating December&nbsp;2026.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <!-- TODO: add your résumé PDF at assets/docs/Yuvraj_Sandhu_Resume.pdf (consider removing your phone number first). -->
+            <a class="btn btn-link" href="assets/docs/Yuvraj_Sandhu_Resume.pdf" download>Résumé (PDF)</a>
+          </div>
+        </div>
+
+        <figure class="scope" aria-label="Decorative oscilloscope showing an FM-modulated carrier on channel 1 and its demodulated message on channel 2">
+          <div class="scope-top" aria-hidden="true">
+            <span><b class="ch1">CH1</b> FM carrier</span>
+            <span>MODE 0 · 101 TAPS</span>
+          </div>
+          <svg class="scope-screen" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="grat-minor" width="8" height="8" patternUnits="userSpaceOnUse">
+                <path d="M8 0H0V8" fill="none" class="grat-minor"/>
+              </pattern>
+              <pattern id="grat-major" width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect width="40" height="40" fill="url(#grat-minor)"/>
+                <path d="M40 0H0V40" fill="none" class="grat-major"/>
+              </pattern>
+              <clipPath id="scope-clip"><rect width="400" height="240"/></clipPath>
+            </defs>
+            <rect width="400" height="240" fill="url(#grat-major)"/>
+            <path d="M0 120H400M200 0V240" class="grat-axis"/>
+            <g clip-path="url(#scope-clip)">
+              <g class="scope-trace">
+                <path class="trace trace-1-glow" id="trace-1-glow"/>
+                <path class="trace trace-1" id="trace-1"/>
+                <path class="trace trace-2" id="trace-2"/>
+              </g>
+            </g>
+          </svg>
+          <div class="scope-bottom" aria-hidden="true">
+            <span><b class="ch2">CH2</b> demod</span>
+            <span>f<sub>c</sub> 107.1 MHz</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="spec-strip" aria-label="Highlights">
+          <li><strong>10×</strong><span>faster router validation with a multithreaded HIL test app</span></li>
+          <li><strong>4-layer</strong><span>PCB for a USB NAND flash recovery device, schematic to layout</span></li>
+          <li><strong>50+</strong><span>infrastructure projects closed out at Toronto Hydro</span></li>
+          <li><strong>−32%</strong><span>DSP block runtime from loop unrolling in a real-time FM radio</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>J1</span> About</p>
+          <h2 id="about-title">Where hardware meets software</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy prose" data-reveal>
+            <p>
+              I'm a fifth-year Computer Engineering &amp; Management student at McMaster
+              University, graduating in December 2026, and currently an Embedded Hardware
+              Design Engineer at Recon Intelligence Corporation in Calgary.
+            </p>
+            <p>
+              I like work that crosses the hardware/software line. I've taken a NAND flash
+              recovery device from schematic to a four-layer layout and written its
+              timing-critical firmware. I've built hardware-in-the-loop test systems for
+              WiFi/LTE routers and Bluetooth sensor modules, and I've pushed
+              signal-processing code to run in real time on a Raspberry&nbsp;Pi.
+            </p>
+            <p>
+              The management half of my degree shows in how I work. At Toronto Hydro I
+              closed out more than 50 projects and mentored three new interns. Before
+              that, I helped design the
+              <a href="#press">Canadian Remembrance Torch</a>, which was lit from the
+              Centennial Flame on Parliament Hill in September 2022 to start a
+              remembrance pilgrimage to the Netherlands.
+            </p>
+          </div>
+
+          <aside class="about-side" data-reveal aria-label="Quick facts">
+            <!-- TODO: replace this monogram with a headshot:
+                 <img src="assets/img/headshot-480.webp" srcset="assets/img/headshot-480.webp 480w, assets/img/headshot-960.webp 960w"
+                      sizes="(min-width: 900px) 320px, 80vw" width="480" height="600" alt="Portrait of Yuvraj Sandhu" loading="lazy" decoding="async"> -->
+            <div class="portrait placeholder-media" role="img" aria-label="Placeholder for a portrait photo">
+              <span aria-hidden="true">YS</span>
+            </div>
+            <dl class="facts">
+              <div><dt>Program</dt><dd>B.Eng. Computer Engineering &amp; Management, McMaster University</dd></div>
+              <div><dt>Graduating</dt><dd>December 2026</dd></div>
+              <div><dt>Currently</dt><dd>Embedded Hardware Design Engineer, Recon Intelligence (Calgary, AB)</dd></div>
+              <div><dt>Focus</dt><dd>PCB design · embedded C/C++ · RF &amp; HIL test · FPGA</dd></div>
+              <div><dt>Work status</dt><dd>U.S. citizen</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U1</span> Experience</p>
+          <h2 id="experience-title">Where I've worked</h2>
+          <p class="section-lede">From CNC post-processors to four-layer boards: six roles across manufacturing, utilities, test engineering and hardware design.</p>
+        </header>
+
+        <ol class="timeline">
+          <!-- Recon -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>Embedded Hardware Design Engineer</h3>
+                <p class="tl-org">Recon Intelligence Corporation</p>
+                <p class="tl-meta"><time datetime="2026-06">Jun 2026</time> – Present · Calgary, AB</p>
+              </header>
+              <ul class="tl-points">
+                <li>Designed a complete USB-powered NAND flash data recovery device around a PIC24FJ microcontroller, owning schematic capture, design verification, BOM selection and four-layer PCB layout in Altium Designer, with high-speed communication as the priority.</li>
+                <li>Wrote embedded C firmware for the device's ONFI parallel NAND interface, tuning timing-critical bit-banged read sequences for maximum throughput.</li>
+                <li>Verified clocking, power and USB device configuration against manufacturer datasheets, and dispositioned a fifteen-item hardware design review with written justifications and corrective changes across power, protection and signal integrity.</li>
+              </ul>
+              <details class="tl-more">
+                <summary>More from this role</summary>
+                <ul class="tl-points">
+                  <li>Designed wiring harnesses and electrical schematics for mining machinery, plus wiring interconnects for strain gauges.</li>
+                  <li>Created manufacturing and assembly drawings to guide production of company hardware.</li>
+                </ul>
+              </details>
+              <ul class="tags" aria-label="Technologies">
+                <li>PIC24F</li><li>Altium Designer</li><li>Embedded C</li><li>ONFI NAND</li><li>USB</li><li>Signal integrity</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- JDRF contract -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>System Validation Engineer <span class="tl-note">(Part-time contract)</span></h3>
+                <p class="tl-org">JDRF Electromag Engineering Inc.</p>
+                <p class="tl-meta"><time datetime="2026-01">Jan 2026</time> – <time datetime="2026-02">Feb 2026</time> · Mississauga, ON</p>
+              </header>
+              <ul class="tl-points">
+                <li>Integrated CI/CD pipelines with J-Link flash testing to automate firmware deployment and validation, raising test-bench throughput and supporting on-time order fulfilment.</li>
+                <li>Built remote-flashing and device firmware update (DFU) libraries for STM32 and nRF microcontrollers.</li>
+                <li>Refined Azure-based firmware pipelines to automatically locate and identify failing deployed products.</li>
+              </ul>
+              <details class="tl-more">
+                <summary>More from this role</summary>
+                <ul class="tl-points">
+                  <li>Traced prototype defects to root cause by analyzing large-scale test data against hardware schematics, defining error tolerances for end-to-end platform assurance.</li>
+                  <li>Performed PCB analysis and rework soldering for RMA repairs and defect isolation.</li>
+                </ul>
+              </details>
+              <ul class="tags" aria-label="Technologies">
+                <li>J-Link</li><li>Azure Pipelines</li><li>DFU</li><li>STM32</li><li>nRF52</li><li>PCB rework</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- JDRF intern -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>Research &amp; Design Lab Engineering Intern</h3>
+                <p class="tl-org">JDRF Electromag Engineering Inc.</p>
+                <p class="tl-meta"><time datetime="2025-06">Jun 2025</time> – <time datetime="2026-01">Jan 2026</time> · Mississauga, ON</p>
+              </header>
+              <ul class="tl-points">
+                <li>Designed and deployed a multithreaded C# (.NET Framework) Windows GUI application that tests WiFi/LTE routers over DHCP, TCP and UDP, making end-to-end validation <strong>10× faster</strong>.</li>
+                <li>Integrated oscilloscopes, a Signal Hound SA44B spectrum analyzer, a Keysight DAQ970A and AC power supplies over TCP using Python, LabVIEW and NI TestStand, enabling hardware-in-the-loop QA testing, NFC and RF product characterization, and automated data analysis.</li>
+                <li>Wrote RF test firmware and libraries in Python and C++ that set the LTE modem's and BLE radio's transmit power (dBm) and frequency across all 2.4&nbsp;GHz BLE channels and the 1.9&nbsp;GHz cellular band.</li>
+              </ul>
+              <details class="tl-more">
+                <summary>More from this role</summary>
+                <ul class="tl-points">
+                  <li>Wrote Python test scripts for router verification on Linux, and created Azure Pipelines to flash routers remotely during testing.</li>
+                  <li>Co-developed the router test plan and helped design its RF test fixture, running programmatic RF tests to select fixture components.</li>
+                  <li>Built a second multithreaded C# application for HIL testing of Bluetooth sensor modules over NFC and UART, designed for real-time systems that need precise timing.</li>
+                  <li>Developed I2C and SPI communications for the sensor-module PCB, and designed a data structure that packs image data over NFC for RMSE analysis and validation.</li>
+                  <li>Set automated pass/fail limits through statistical analysis of test data in Python and Excel, and wrote SQL queries to track and update a database of tested products.</li>
+                  <li>Authored reusable Python and LabVIEW API libraries, version-controlled in Git, for the customer-facing Field Application Engineering team, and contributed to public Python libraries.</li>
+                </ul>
+              </details>
+              <ul class="tags" aria-label="Technologies">
+                <li>C# / .NET</li><li>Python</li><li>LabVIEW</li><li>NI TestStand</li><li>HIL testing</li><li>BLE</li><li>LTE</li><li>NFC</li><li>SQL</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- Toronto Hydro -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>Data Analytics Intern</h3>
+                <p class="tl-org">Toronto Hydro</p>
+                <p class="tl-meta"><time datetime="2023-05">May 2023</time> – <time datetime="2024-08">Aug 2024</time> · Toronto, ON</p>
+              </header>
+              <ul class="tl-points">
+                <li>Developed a Python automation application with a Qt GUI that gathers project data through SQL queries and processes it in Pandas and NumPy pipelines, <strong>cutting manual data entry by 50%</strong>.</li>
+                <li>Automated the invoicing process for Metrolinx, streamlining the team's workflow and reducing manual errors.</li>
+                <li>Managed the closeout of <strong>50+ projects</strong> collectively valued at over $1 million.</li>
+              </ul>
+              <details class="tl-more">
+                <summary>More from this role</summary>
+                <ul class="tl-points">
+                  <li>Implemented statistical models and trend analysis in Python and Excel to forecast Light Rail Transit (LRT) project costs, improving planning accuracy and financial oversight.</li>
+                  <li>Performed load calculations, design reviews and cost estimates for multi-million-dollar infrastructure projects.</li>
+                  <li>Mentored and trained three new interns over four months.</li>
+                </ul>
+              </details>
+              <p class="tl-link"><a href="#references">Read my manager's reference →</a></p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>Qt</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Excel</li><li>Forecasting</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- Torch -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>Research &amp; Design Lab Engineering Intern</h3>
+                <p class="tl-org">The Canadian Remembrance Torch</p>
+                <p class="tl-meta"><time datetime="2021-10">Oct 2021</time> – <time datetime="2022-11">Nov 2022</time> · Hamilton, ON</p>
+              </header>
+              <ul class="tl-points">
+                <li>Designed an Arduino Nano–based embedded system end to end, from custom PCB to C++ firmware, for real-time heart-rate acquisition and LED-array visualization, with an on-device ML model that classifies signal quality to reject noisy readings.</li>
+                <li>Implemented power-management algorithms and refined sensor calibration for a <strong>60% increase in battery life</strong> and reliable operation under thermal stress.</li>
+                <li>Designed the torch's outer body and shell in Autodesk Fusion and AutoCAD for outdoor, ergonomic use.</li>
+              </ul>
+              <p class="tl-link"><a href="#press">See the press coverage →</a></p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Arduino Nano</li><li>C++</li><li>PCB design</li><li>On-device ML</li><li>Power management</li><li>Autodesk Fusion</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- MAV -->
+          <li class="tl-item" data-reveal>
+            <article class="tl-card">
+              <header class="tl-head">
+                <h3>Software Engineer</h3>
+                <p class="tl-org">MAV Woodworking</p>
+                <p class="tl-meta"><time datetime="2019-06">Jun 2019</time> – <time datetime="2020-09">Sep 2020</time> · Bolton, ON</p>
+              </header>
+              <ul class="tl-points">
+                <li>Developed post-processors in Java for SCM CNC machines, translating CAM toolpaths into machine-specific code.</li>
+                <li>Wrote machining programs and macros in SCM's C#-based Maestro Scripting Language (MSL), defining workpieces, geometry, and drilling and routing operations in code.</li>
+                <li>Created Python interfaces to SCM Maestro CAD/CAM software for custom designs, and ran machine simulations in Autodesk Fusion.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Java</li><li>C# (MSL)</li><li>Python</li><li>CNC / CAM</li><li>Autodesk Fusion</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U2</span> Projects</p>
+          <h2 id="projects-title">Selected projects</h2>
+          <p class="section-lede">Real-time DSP, digital hardware and low-power wireless, built for coursework and capstone.</p>
+        </header>
+
+        <!-- Featured: SDR (source: project-group-37-wednesday/doc) -->
+        <article class="project project-featured" data-reveal aria-labelledby="proj-sdr">
+          <div class="project-body">
+            <p class="project-kicker">Featured · COMPENG 3DY4 · Winter 2026 · Team of 4</p>
+            <h3 id="proj-sdr">Real-Time FM Software-Defined Radio</h3>
+            <p>
+              An FM receiver built in software. It takes raw I/Q samples from an RTL-SDR
+              dongle and produces mono audio, stereo audio and Radio Data System (RDS) data
+              in real time on a Raspberry&nbsp;Pi&nbsp;4. It supports four sample-rate modes,
+              and the filter length scales from 75 to 101 taps as the CPU clock is lowered
+              from 1.5&nbsp;GHz to 600&nbsp;MHz.
+            </p>
+            <h4>What I built</h4>
+            <ul class="project-points">
+              <li>The C++ <strong>stereo path</strong>: mixer, sample-rate-conversion filtering, stereo combiner, and the PLL and delay-block functions that recover the 38&nbsp;kHz carrier and keep the mono and stereo channels aligned.</li>
+              <li>The C++ <strong>mono path</strong> for modes 0 and 1.</li>
+              <li><strong>Multithreading</strong>: split the RF front end and audio processing into producer and consumer threads, joined by a thread-safe queue (mutex and condition variable).</li>
+              <li><strong>Loop unrolling</strong> of the FIR convolution, the main hot spot in the signal chain.</li>
+              <li>The RDS <strong>Python model</strong> from Manchester decoding through the application layer, which decodes the station's PI code, program type and program-service name.</li>
+            </ul>
+            <p class="project-aside">
+              <strong>Hardest bug:</strong> the left and right channels kept bleeding into
+              each other. The cause was the mono delay block, which was being delayed by
+              <em>taps × U</em> instead of <em>taps / 2</em>. That put mono about 30&nbsp;ms out
+              of phase with stereo and wiped out the channel separation.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>C++</li><li>Python</li><li>Multithreading</li><li>FIR filters</li><li>PLL / NCO</li><li>Rational resampling</li><li>Raspberry Pi</li><li>RTL-SDR</li>
+            </ul>
+            <!-- TODO: The repository is a private course repo (3dy4-2026 org) and the report lists every
+                 member's student number. Link a sanitized write-up or demo video here instead. -->
+            <p class="project-links"><span class="muted">Source is in a private course repository; available on request.</span></p>
+          </div>
+          <dl class="metrics" aria-label="Measured results, mode 0 at 101 taps">
+            <div>
+              <dt>Mono block time</dt>
+              <dd><span class="metric-from">2.671</span> → <strong>1.819 ms</strong></dd>
+              <dd class="metric-note">−32% with loop unrolling</dd>
+            </div>
+            <div>
+              <dt>Stereo block time</dt>
+              <dd><span class="metric-from">4.754</span> → <strong>3.105 ms</strong></dd>
+              <dd class="metric-note">−35% with loop unrolling</dd>
+            </div>
+            <div>
+              <dt>Operating modes</dt>
+              <dd><strong>4</strong></dd>
+              <dd class="metric-note">RF 1.536–2.56 MS/s → audio 32–48 kS/s</dd>
+            </div>
+            <div>
+              <dt>CPU range</dt>
+              <dd><strong>0.6–1.5 GHz</strong></dd>
+              <dd class="metric-note">75–101 filter taps</dd>
+            </div>
+          </dl>
+        </article>
+
+        <div class="project-grid">
+          <!-- FPGA (source: FPGA résumé) -->
+          <article class="project" data-reveal aria-labelledby="proj-fpga">
+            <p class="project-kicker">COMPENG 3DQ5 · Sep – Dec 2024</p>
+            <h3 id="proj-fpga">FPGA Image Decompressor</h3>
+            <p>A hardware decoder for a JPEG-style compression spec, written in SystemVerilog. A compressed 320×240 image streams over UART into external SRAM, is decoded on an Altera Cyclone&nbsp;II FPGA, and is displayed over VGA.</p>
+            <ul class="project-points">
+              <li>Met timing at <strong>50&nbsp;MHz</strong> through the full Quartus flow, scheduling every SRAM access and multiplier operation cycle by cycle.</li>
+              <li>Fixed-point 8×8 IDCT built from only <strong>three shared multipliers at ≥85% utilization</strong>, running alongside the lossless decoder.</li>
+              <li>FSM-driven bitstream parser with a 32-bit shift buffer, zigzag placement and barrel-shifter dequantization.</li>
+              <li>6-tap symmetric FIR interpolation and MAC-based YUV→RGB conversion with saturation.</li>
+              <li>Each stage verified against a C reference model in testbenches, then validated end to end on the board.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>SystemVerilog</li><li>Intel Quartus</li><li>ModelSim</li><li>Cyclone II</li><li>SRAM</li><li>VGA</li>
+            </ul>
+          </article>
+
+          <!-- Capstone (source: résumé) -->
+          <article class="project" data-reveal aria-labelledby="proj-wildfire">
+            <p class="project-kicker">Capstone · Sep 2025 – Apr 2026</p>
+            <h3 id="proj-wildfire">Early-Stage Wildfire Detection Network</h3>
+            <p>A solar-powered wireless sensor network that catches wildfires at the smouldering stage. Nodes with a ~100&nbsp;m range detect smouldering temperatures (~300&nbsp;°C) and relay heat level and location toward a lookout tower, while drones forward packets and imagery to a ground station.</p>
+            <ul class="project-points">
+              <li>nRF52 firmware for sensor sampling, local processing, buffering and packet transmission over the integrated BLE radio.</li>
+              <li>BLE 5.0 Mesh messaging over connectionless advertising packets, which avoids power-hungry persistent connections under dense canopy.</li>
+              <li>Solar energy-harvesting stage: a boost charge controller stores low photodiode-array output in a supercapacitor, enough for several transmissions per charge.</li>
+              <li>Sensor fusion: IR thermopile, electrochemical CO sensor and a pulsed-LED optical smoke sensor.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>nRF52</li><li>BLE 5.0 Mesh</li><li>Energy harvesting</li><li>Low-power sensing</li><li>Embedded C</li>
+            </ul>
+          </article>
+
+          <!-- Torch (source: résumé + press) -->
+          <article class="project" data-reveal aria-labelledby="proj-torch">
+            <p class="project-kicker">McMaster Engineering · 2021 – 2022 · Team of 3</p>
+            <h3 id="proj-torch">The Canadian Remembrance Torch</h3>
+            <p>A commemorative torch honouring the Canadian troops who helped liberate the Netherlands in the Second World War. Our student team won the university's design challenge, then designed and built the torch, which was lit from the Centennial Flame on Parliament Hill on September&nbsp;5, 2022.</p>
+            <ul class="project-points">
+              <li>Embedded system end to end: custom PCB and C++ firmware on an Arduino Nano for heart-rate acquisition and LED-array visualization.</li>
+              <li>Power management and sensor calibration for 60% longer battery life.</li>
+              <li>Outer body and shell modelled in Autodesk Fusion and AutoCAD.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Arduino</li><li>C++</li><li>PCB</li><li>CAD</li>
+            </ul>
+            <p class="project-links"><a href="#press">Read the coverage →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U3</span> Skills</p>
+          <h2 id="skills-title">Toolbox</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group" data-reveal>
+            <h3>Languages</h3>
+            <ul class="chips"><li>C</li><li>C++</li><li>C#</li><li>Python</li><li>SystemVerilog</li><li>VHDL</li><li>Java</li><li>SQL</li><li>JavaScript</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Embedded &amp; firmware</h3>
+            <ul class="chips"><li>PIC24F</li><li>STM32</li><li>nRF52 (nRF Connect SDK)</li><li>ESP32</li><li>Zephyr RTOS</li><li>ROS</li><li>DFU &amp; remote flashing</li><li>ICSP / J-Link</li><li>SPI</li><li>I2C</li><li>UART</li><li>ONFI parallel NAND</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>FPGA &amp; digital design</h3>
+            <ul class="chips"><li>Intel Quartus</li><li>ModelSim</li><li>Altera Cyclone</li><li>Finite-state machines</li><li>Fixed-point datapaths</li><li>Multiplier sharing &amp; MAC units</li><li>Dual-port embedded RAM</li><li>Testbench verification</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Hardware &amp; PCB design</h3>
+            <ul class="chips"><li>Altium Designer</li><li>Multilayer layout &amp; BOM</li><li>Wiring harnesses</li><li>Manufacturing &amp; assembly drawings</li><li>KiCad</li><li>OrCAD PSpice</li><li>LTspice</li><li>Autodesk Fusion</li><li>AutoCAD</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Test &amp; validation</h3>
+            <ul class="chips"><li>Hardware-in-the-loop</li><li>LabVIEW</li><li>NI TestStand</li><li>Signal Hound analyzers</li><li>Keysight DAQ970A</li><li>Oscilloscopes</li><li>RF power &amp; frequency testing</li><li>Failure analysis</li><li>PCB rework</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Wireless &amp; networking</h3>
+            <ul class="chips"><li>BLE 5.0</li><li>BLE Mesh</li><li>LTE</li><li>WiFi</li><li>NFC</li><li>TCP / UDP</li><li>DHCP</li><li>Software-defined radio</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Software &amp; DevOps</h3>
+            <ul class="chips"><li>Linux</li><li>Windows</li><li>.NET Framework</li><li>Multithreading</li><li>Qt</li><li>Git</li><li>CI/CD (Azure Pipelines)</li><li>Pandas</li><li>NumPy</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== COURSEWORK ============================== -->
+    <section class="section" id="coursework" aria-labelledby="coursework-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U4</span> Coursework</p>
+          <h2 id="coursework-title">Academic highlights</h2>
+          <p class="section-lede">Selected courses from the Computer Engineering &amp; Management program at McMaster University.</p>
+        </header>
+
+        <!-- TODO: No transcript was provided. Course codes marked "TODO" and the Management group need filling in from your transcript. -->
+        <div class="course-grid">
+          <div class="course-group" data-reveal>
+            <h3>Hardware &amp; digital systems</h3>
+            <ul class="courses">
+              <li><span class="code">COMPENG 3DQ5</span><span class="cname">Digital Systems Design</span><span class="cnote">FPGA design in SystemVerilog; built the image decompressor above.</span></li>
+              <li><span class="code placeholder">TODO</span><span class="cname">Embedded Systems</span></li>
+              <li><span class="code">COMPENG 3DY4</span><span class="cname">Project course: real-time systems integration <span class="placeholder">TODO: confirm official title</span></span><span class="cnote">Real-time FM software-defined radio on a Raspberry Pi.</span></li>
+            </ul>
+          </div>
+          <div class="course-group" data-reveal>
+            <h3>Software &amp; computing</h3>
+            <ul class="courses">
+              <li><span class="code">COMPENG 4SP4</span><span class="cname">High-Performance Programming</span><span class="cnote">Benchmarking with Google Benchmark and Linux perf counters on a SLURM-managed cluster.</span></li>
+              <li><span class="code placeholder">TODO</span><span class="cname">Algorithm Design and Analysis</span></li>
+              <li><span class="code placeholder">TODO</span><span class="cname">Software Development</span></li>
+            </ul>
+          </div>
+          <div class="course-group" data-reveal>
+            <h3>Systems &amp; control</h3>
+            <ul class="courses">
+              <li><span class="code placeholder">TODO</span><span class="cname">Introduction to Control Systems</span></li>
+            </ul>
+          </div>
+          <div class="course-group" data-reveal>
+            <h3>Management</h3>
+            <ul class="courses">
+              <li><span class="code placeholder">TODO</span><span class="cname placeholder">Add management courses from your transcript (e.g. accounting, finance, operations).</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PRESS ============================== -->
+    <section class="section section-alt" id="press" aria-labelledby="press-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U5</span> Press</p>
+          <h2 id="press-title">In the news</h2>
+          <p class="section-lede">Coverage of the Canadian Remembrance Torch, designed and built by three McMaster engineering students in 2022.</p>
+        </header>
+
+        <!-- Photos are hot-linked from each publisher with credit. TODO: get permission or swap in your own photos before relying on these long-term. -->
+        <div class="press-grid">
+          <article class="press-card" data-reveal aria-labelledby="press-oc">
+            <figure class="press-media">
+              <img src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/09/20220905006_em_272362670-w.jpg?quality=85&amp;strip=all&amp;w=640"
+                   width="640" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-fallback
+                   alt="Yuvraj Sandhu holds the Canadian Remembrance Torch as it is lit from the Centennial Flame on Parliament Hill, beside veteran John Preece and Jaap Jan Speelman of the Embassy of the Netherlands.">
+              <figcaption>Photo: Errol McGihon / Postmedia</figcaption>
+            </figure>
+            <div class="press-body">
+              <p class="press-pub">Ottawa Citizen · Elizabeth Payne · <time datetime="2022-09-05">Sep 5, 2022</time></p>
+              <h3 id="press-oc">Netherlands liberation: Parliament Hill torch-lighting marks start of pilgrimage by descendants of Canadian soldiers</h3>
+              <p>Covers the ceremony where the Canadian Remembrance Torch, designed and built by three McMaster engineering students, was lit for the first time from the Centennial Flame. The ceremony launched the "In Our Fathers' Footsteps" pilgrimage, in which descendants of Canadian soldiers walk 60&nbsp;km in the Netherlands. Yuvraj is pictured holding the torch.</p>
+              <a class="press-link" href="https://ottawacitizen.com/news/local-news/torch-lighting-ceremony-to-mark-beginning-of-pilgrimage-by-descendants-of-canadian-soldiers-who-helped-liberate-the-netherlands" target="_blank" rel="noopener noreferrer">Read on Ottawa Citizen<span class="visually-hidden"> (opens in a new tab)</span> ↗</a>
+            </div>
+          </article>
+
+          <article class="press-card" data-reveal aria-labelledby="press-mac">
+            <figure class="press-media">
+              <img src="https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-768x432.jpg"
+                   srcset="https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-400x225.jpg 400w,
+                           https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-768x432.jpg 768w"
+                   sizes="(min-width: 1024px) 360px, (min-width: 700px) 50vw, 100vw"
+                   width="768" height="432" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-fallback
+                   alt="The commemorative torch made by McMaster Engineering students.">
+              <figcaption>Image: McMaster Engineering</figcaption>
+            </figure>
+            <div class="press-body">
+              <p class="press-pub">McMaster Engineering · ECE News · <time datetime="2022-08-25">Aug 25, 2022</time></p>
+              <h3 id="press-mac">Netherlands-bound torch designed by Mac Eng students sheds light on WWII Canadian Remembrance</h3>
+              <p>Profiles the student designers: Anna Esposito, Sebastian Tattersall and Yuvraj Sandhu. Built at the McMaster Manufacturing Research Institute, the torch was commissioned by Karen Hunter of In Our Fathers' Footsteps. After a 60&nbsp;km trek, the torch was to be presented to Princess Margriet at Palace Het Loo, and Air Canada would fly the students and the flame to the Netherlands.</p>
+              <blockquote class="press-quote">
+                <p>"As the flame goes from the top of the crown downwards, it shows a story like a history."</p>
+              </blockquote>
+              <a class="press-link" href="https://www.eng.mcmaster.ca/ece/news/netherlands-bound-torch-designed-by-mac-eng-students-sheds-light-on-wwii-canadian-remembrance/" target="_blank" rel="noopener noreferrer">Read on McMaster Engineering<span class="visually-hidden"> (opens in a new tab)</span> ↗</a>
+            </div>
+          </article>
+
+          <article class="press-card" data-reveal aria-labelledby="press-spec">
+            <figure class="press-media">
+              <img src="https://bloximages.chicago2.vip.townnews.com/thespec.com/content/tncms/assets/v3/editorial/3/b0/3b0ab28c-3860-52e7-843e-c2439b643655/63d9a3d29cbc1.image.jpg?resize=640%2C494"
+                   width="640" height="494" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-fallback
+                   alt="McMaster students Yuvraj Sandhu, Sebastian Tattersall and Anna Esposito with the commemorative torch they were building.">
+              <figcaption>Photo: Barry Gray / The Hamilton Spectator</figcaption>
+            </figure>
+            <div class="press-body">
+              <p class="press-pub">The Hamilton Spectator · Mark McNeil · <time datetime="2022-07-26">Jul 26, 2022</time></p>
+              <h3 id="press-spec">McMaster commemorative torch will be part of Dutch liberation pilgrimage in September</h3>
+              <p>A "Flashbacks" column on the three students creating a torch to honour Canadian soldiers in the Dutch liberation. The team won a university competition to build it and to join the nine-day pilgrimage. The students were working to make the flame wind- and rain-resistant, safe to carry and not too heavy, decorated with maple leaves and tulips for Canada and the Netherlands.</p>
+              <blockquote class="press-quote">
+                <p>"To help design the torch on my computer and then go across the ocean to hand over the torch to some very important people is mind boggling to me."</p>
+              </blockquote>
+              <a class="press-link" href="https://www.thespec.com/news/hamilton-region/flashbacks-hamilton/mcmaster-commemorative-torch-will-be-part-of-dutch-liberation-pilgrimage-in-september/article_a0ccd9fd-00e9-5f3d-a2e6-58f7311ff018.html" target="_blank" rel="noopener noreferrer">Read on The Hamilton Spectator<span class="visually-hidden"> (opens in a new tab)</span> ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== REFERENCES ============================== -->
+    <section class="section" id="references" aria-labelledby="references-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="refdes"><span>U6</span> References</p>
+          <h2 id="references-title">What managers say</h2>
+        </header>
+
+        <figure class="testimonial" data-reveal>
+          <blockquote>
+            <p>"One of Yuvraj's most impressive achievements has been automating the invoicing process for Metrolinx. This initiative streamlined our workflow, drastically reduced manual errors, and improved the overall efficiency of our operations."</p>
+            <p>"Yuvraj's combination of technical expertise, project management skills, and leadership abilities make him an asset to any team."</p>
+          </blockquote>
+          <figcaption>
+            <span class="t-name">Hareet Basi</span>
+            <span class="t-role">Manager, Project Execution, Priority Transit · Toronto Hydro</span>
+          </figcaption>
+        </figure>
+
+        <ul class="ref-stats" data-reveal aria-label="Highlights from the reference letter">
+          <li><strong>50+</strong><span>project closeouts managed</span></li>
+          <li><strong>$1M+</strong><span>combined project value</span></li>
+          <li><strong>3</strong><span>interns mentored over four months</span></li>
+        </ul>
+        <p class="ref-note muted">Full reference letter and contact details available on request.</p>
+        <!-- TODO: add more references or testimonials (e.g. JDRF or Recon) as you collect them. -->
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner" data-reveal>
+        <p class="refdes"><span>J2</span> Contact</p>
+        <h2 id="contact-title">Let's build something</h2>
+        <p class="section-lede">I'm looking for full-time roles in embedded hardware, firmware and test engineering starting after December 2026. The fastest way to reach me is email.</p>
+        <ul class="contact-links">
+          <li><a class="btn btn-primary" href="mailto:yuvrajsandhu676@gmail.com">yuvrajsandhu676@gmail.com</a></li>
+          <li><a class="btn btn-ghost" href="https://github.com/Sandhuy" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <!-- TODO: replace href with your LinkedIn profile URL. -->
+          <li><a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Yuvraj Sandhu</p>
+      <p class="muted">Hand-built with HTML, CSS and vanilla JavaScript.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
