@@ -476,16 +476,18 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
   width: 100%;
   justify-self: center;
 }
-.scope-top {
+.scope-top,
+.scope-bottom {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.2rem 0.35rem;
-  margin-bottom: 0.5rem;
 }
+.scope-top { margin-bottom: 0.5rem; }
+.scope-bottom { margin-top: 0.5rem; }
 .scope b { font-weight: 500; padding: 0.05rem 0.35rem; border-radius: 3px; color: var(--scope-bg); margin-right: 0.3rem; }
 .scope .ch1 { background: var(--scope-ch1); }
-.bus-proto { color: var(--scope-ch1); font-weight: 500; }
+.scope .ch2 { background: var(--scope-ch2); }
 
 .scope-screen {
   width: 100%;
@@ -494,33 +496,14 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
   background: radial-gradient(ellipse at center, #1C1620 0%, var(--scope-bg) 75%);
   border-radius: 8px;
 }
+.grat-minor { stroke: var(--scope-grid); stroke-width: 0.5; }
+.grat-major { stroke: var(--scope-grid-major); stroke-width: 0.8; }
+.grat-axis { stroke: rgba(253, 191, 87, 0.28); stroke-width: 0.8; fill: none; }
 
-/* Circuit board (bus demo) */
-.bd-root,
-.la-root { transition: opacity 0.45s ease; }
-.scope.is-fading .bd-root,
-.scope.is-fading .la-root { opacity: 0; }
-.bd-grid { fill: rgba(253, 191, 87, 0.09); }
-.bd-silk { fill: var(--scope-text); opacity: 0.35; font: 500 7px var(--font-mono); letter-spacing: 0.06em; }
-.bd-silk-end { text-anchor: end; }
-.bd-body { fill: #241D29; stroke: rgba(255, 255, 255, 0.14); stroke-width: 1; }
-.bd-dot { fill: rgba(255, 255, 255, 0.25); }
-.bd-pin { fill: rgba(217, 207, 213, 0.32); }
-.bd-pin.on { fill: var(--scope-ch1); }
-.bd-name { fill: #EEE5EB; font: 600 11px var(--font-mono); text-anchor: middle; letter-spacing: 0.04em; }
-.bd-sub { fill: var(--scope-text); opacity: 0.65; font: 500 7.5px var(--font-mono); text-anchor: middle; }
-.bd-ref { fill: var(--scope-text); opacity: 0.7; font: 500 7.5px var(--font-mono); text-anchor: middle; }
-.bd-pinname { fill: var(--scope-text); font: 500 7px var(--font-mono); }
-.bd-pinname-r { text-anchor: end; }
-.bd-trace { fill: none; stroke: rgba(253, 191, 87, 0.16); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
-.bd-sig { fill: none; stroke-width: 2.2; stroke-linejoin: round; }
-.bd-glow { fill: none; stroke-width: 7; opacity: 0.22; stroke-linejoin: round; }
-.bd-data { stroke: var(--scope-ch1); }
-.bd-ctrl { stroke: var(--scope-ch2); }
-.bd-pad { fill: var(--scope-bg); stroke: rgba(253, 191, 87, 0.5); stroke-width: 1.4; }
-.bd-via { fill: var(--scope-bg); stroke: rgba(253, 191, 87, 0.35); stroke-width: 1.4; }
-.bd-probe { stroke: #FFFFFF; stroke-opacity: 0.35; stroke-width: 0.8; stroke-dasharray: 2 2; fill: none; }
-.bd-probe-label { fill: var(--scope-text); opacity: 0.6; font: 500 7px var(--font-mono); }
+.trace { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.trace-1 { stroke: var(--scope-ch1); stroke-width: 1.6; }
+.trace-1-glow { stroke: var(--scope-ch1); stroke-width: 5; opacity: 0.16; }
+.trace-2 { stroke: var(--scope-ch2); stroke-width: 1.6; stroke-dasharray: 5 4; }
 
 /* Logic analyzer strip */
 .la { margin-top: 0.75rem; padding-top: 0.6rem; border-top: 1px solid rgba(255, 255, 255, 0.08); }
@@ -540,6 +523,8 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
   background: radial-gradient(ellipse at center, #1C1620 0%, var(--scope-bg) 75%);
   border-radius: 8px;
 }
+.la-root { transition: opacity 0.45s ease; }
+.la-screen.is-fading .la-root { opacity: 0; }
 .la-grid line { stroke: var(--scope-grid); stroke-width: 0.6; }
 .la-label { fill: var(--scope-text); font: 500 8px var(--font-mono); }
 .la-label-dim { opacity: 0.6; }
@@ -551,6 +536,10 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
 .la-ann-addr rect { fill: rgba(242, 140, 181, 0.14); stroke: rgba(242, 140, 181, 0.6); }
 .la-ann-addr text { fill: #FBD0E2; }
 .la-cursor { stroke: #FFFFFF; stroke-opacity: 0.55; stroke-width: 0.8; stroke-dasharray: 2 2; transition: opacity 0.2s; }
+
+.scope-trace { animation: sweep 7s linear infinite; }
+.scope.is-paused .scope-trace { animation-play-state: paused; }
+@keyframes sweep { to { transform: translateX(-400px); } }
 
 /* Spec strip */
 .spec-strip {
@@ -1184,6 +1173,7 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .scope-trace { animation: none; }
 }
 
 /* ---------- Print ---------- */
