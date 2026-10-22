@@ -389,7 +389,7 @@
         <header class="section-head" data-reveal>
           <p class="refdes"><span>U2</span> Projects</p>
           <h2 id="projects-title">Selected projects</h2>
-          <p class="section-lede">Real-time DSP, digital hardware and low-power wireless, built for coursework and capstone.</p>
+          <p class="section-lede">Real-time DSP, FPGA hardware, low-power wireless and pacemaker firmware, built for coursework and capstone.</p>
         </header>
 
         <!-- Featured: SDR (source: project-group-37-wednesday/doc) -->
@@ -449,24 +449,77 @@
           </dl>
         </article>
 
-        <div class="project-grid">
-          <!-- FPGA (source: FPGA résumé) -->
-          <article class="project" data-reveal aria-labelledby="proj-fpga">
-            <p class="project-kicker">COMPENG 3DQ5 · Sep – Dec 2024</p>
+        <!-- Featured: FPGA (source: Group 55 final report + M1_interface.sv / M2_interface.sv / project.sv) -->
+        <article class="project project-featured project-featured--alt" data-reveal aria-labelledby="proj-fpga">
+          <div class="project-body">
+            <p class="project-kicker">Featured · COMPENG 3DQ5 · Fall 2024 · Team of 2</p>
             <h3 id="proj-fpga">FPGA Image Decompressor</h3>
-            <p>A hardware decoder for a JPEG-style compression spec, written in SystemVerilog. A compressed 320×240 image streams over UART into external SRAM, is decoded on an Altera Cyclone&nbsp;II FPGA, and is displayed over VGA.</p>
+            <p>
+              Hardware, written in SystemVerilog with my partner Lisa Chtcherbakova, that
+              turns a compressed 320×240 image back into RGB pixels on an FPGA. The
+              compressed image arrives over UART into external SRAM, and the decoded pixels
+              are written back to SRAM for the VGA controller to display. We completed and
+              verified Milestone&nbsp;1 (upsampling and colour-space conversion) and partially
+              completed Milestone&nbsp;2 (the inverse DCT).
+            </p>
+            <ol class="pipeline" aria-label="Decoder stages in order, with how far each got">
+              <li><span>UART in</span></li>
+              <li><span>SRAM</span></li>
+              <li class="is-skipped"><span>Lossless decode <small>M3</small><span class="visually-hidden"> (not implemented)</span></span></li>
+              <li class="is-partial"><span>Inverse DCT <small>M2</small><span class="visually-hidden"> (partially complete)</span></span></li>
+              <li class="is-done"><span>Upsample + YUV→RGB <small>M1</small><span class="visually-hidden"> (complete)</span></span></li>
+              <li><span>VGA out</span></li>
+            </ol>
+            <p class="pipeline-key" aria-hidden="true">
+              <span class="key key-done">Complete</span>
+              <span class="key key-partial">Partial</span>
+              <span class="key key-skipped">Not implemented</span>
+            </p>
+            <h4>What I built</h4>
             <ul class="project-points">
-              <li>Met timing at <strong>50&nbsp;MHz</strong> through the full Quartus flow, scheduling every SRAM access and multiplier operation cycle by cycle.</li>
-              <li>Fixed-point 8×8 IDCT built from only <strong>three shared multipliers at ≥85% utilization</strong>, running alongside the lossless decoder.</li>
-              <li>FSM-driven bitstream parser with a 32-bit shift buffer, zigzag placement and barrel-shifter dequantization.</li>
-              <li>6-tap symmetric FIR interpolation and MAC-based YUV→RGB conversion with saturation.</li>
-              <li>Each stage verified against a C reference model in testbenches, then validated end to end on the board.</li>
+              <li><strong>Milestone 1, co-designed and co-written with my partner.</strong> A six-clock-cycle "common case" turns out one even/odd RGB pixel pair using three shared multipliers. It repeats 160 times per row for all 240 rows, overlapping Y, U and V SRAM reads with packed RGB writes.</li>
+              <li><strong>Interpolation that exploits symmetry.</strong> Odd U′/V′ samples come from a 6-tap filter (coefficients 21, −52, 159). Mirrored samples (j±1, j±3, j±5) are summed before multiplying, which halves the multiplies, and they come from a sliding window of six U and six V registers.</li>
+              <li><strong>Row-edge handling.</strong> Six special-case codes clamp the filter window at the start and end of every row, so edge pixels reuse the nearest valid sample.</li>
+              <li><strong>Colour conversion with clipping.</strong> Fixed-point YUV→RGB accumulates over several cycles, then each channel is saturated to 0–255 before two channels are packed into each 16-bit SRAM write.</li>
+              <li><strong>Milestone 2, my part.</strong> I worked on the logic that fetches 8×8 blocks of S′ from SRAM into dual-port embedded RAM, and on the first matrix multiplication (T&nbsp;=&nbsp;S′·C) using three multipliers and a cosine-coefficient lookup table. My partner took the second stage.</li>
             </ul>
+            <p class="project-aside">
+              <strong>How we worked:</strong> we planned every clock cycle in a spreadsheet
+              state table before writing any SystemVerilog: which multiplier computes what, when each SRAM read lands, and when each write goes out. In the final
+              schedule, all three multipliers are busy in five of the six cycles. We then derived the
+              Milestone&nbsp;1 latency by hand and confirmed it in simulation (4,608.28&nbsp;µs,
+              or 20&nbsp;ns per cycle at 50&nbsp;MHz). We traced the critical path from a multiplier input
+              to the <code>result_Go</code> accumulator through 17 interconnect hops.
+            </p>
             <ul class="tags" aria-label="Technologies">
-              <li>SystemVerilog</li><li>Intel Quartus</li><li>ModelSim</li><li>Cyclone II</li><li>SRAM</li><li>VGA</li>
+              <li>SystemVerilog</li><li>Intel Quartus</li><li>ModelSim</li><li>Cyclone II</li><li>Fixed-point DSP</li><li>Dual-port RAM</li><li>SRAM</li><li>UART</li><li>VGA</li>
             </ul>
-          </article>
+          </div>
+          <dl class="metrics" aria-label="Milestone 1 results, from the final report">
+            <div>
+              <dt>Multiplier use</dt>
+              <dd><strong>88.9%</strong></dd>
+              <dd class="metric-note">3 shared multipliers; the target was 75%</dd>
+            </div>
+            <div>
+              <dt>Latency</dt>
+              <dd><strong>230,414</strong> <span class="metric-unit">cycles</span></dd>
+              <dd class="metric-note">≈4.61 ms per image at 50 MHz, confirmed in simulation</dd>
+            </div>
+            <div>
+              <dt>Throughput</dt>
+              <dd><strong>2 px</strong> <span class="metric-unit">/ 6 cycles</span></dd>
+              <dd class="metric-note">One even/odd RGB pair per common case</dd>
+            </div>
+            <div>
+              <dt>Area</dt>
+              <dd><strong>2,407</strong> <span class="metric-unit">LEs</span></dd>
+              <dd class="metric-note">1,110 registers after Milestone 1, up from 616 / 369</dd>
+            </div>
+          </dl>
+        </article>
 
+        <div class="project-grid">
           <!-- Capstone (source: résumé) -->
           <article class="project" data-reveal aria-labelledby="proj-wildfire">
             <p class="project-kicker">Capstone · Sep 2025 – Apr 2026</p>
@@ -480,6 +533,21 @@
             </ul>
             <ul class="tags" aria-label="Technologies">
               <li>nRF52</li><li>BLE 5.0 Mesh</li><li>Energy harvesting</li><li>Low-power sensing</li><li>Embedded C</li>
+            </ul>
+          </article>
+
+          <!-- Pacemaker (source: SFWRENG-3K04-Project repo; no docs folder, team-level description) -->
+          <article class="project" data-reveal aria-labelledby="proj-pacemaker">
+            <p class="project-kicker">SFWRENG 3K04 · Sep – Nov 2022 · Team of 5</p>
+            <h3 id="proj-pacemaker">Pacemaker Firmware &amp; Device Controller-Monitor</h3>
+            <p>Pacemaker firmware for an NXP FRDM-K64F board, modelled in Simulink and Stateflow, plus a Python desktop app (the Device Controller-Monitor, or DCM) that programs and monitors it over serial. It supports eight pacing modes: AOO, VOO, AAI, VVI and their rate-adaptive versions.</p>
+            <ul class="project-points">
+              <li><strong>Built the DCM's GUI on my own</strong> in Tkinter: patient login and registration (up to 10 local users), a screen for each of the eight pacing modes with range-checked parameter entry and saved settings, and a live electrogram (egram) plot of atrial and ventricular signals.</li>
+              <li><strong>Worked on the Simulink pacing functions</strong>: Stateflow pacing logic generated into firmware for the K64F, with rate-adaptive modes driven by the board's FXOS8700 accelerometer.</li>
+              <li>The DCM talks to the board over a packed binary serial protocol at 115200 baud. It writes parameters, then reads them back to confirm what the pacemaker stored.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Simulink</li><li>Stateflow</li><li>FRDM-K64F</li><li>Python</li><li>Tkinter</li><li>UART</li><li>matplotlib</li>
             </ul>
           </article>
 
@@ -557,7 +625,7 @@
           <div class="course-group" data-reveal>
             <h3>Hardware &amp; digital systems</h3>
             <ul class="courses">
-              <li><span class="code">COMPENG 3DQ5</span><span class="cname">Digital Systems Design</span><span class="cnote">FPGA design in SystemVerilog; built the image decompressor above.</span></li>
+              <li><span class="code">COMPENG 3DQ5</span><span class="cname">Digital Systems Design</span><span class="cnote">FPGA design in SystemVerilog; built the upsampling and colour-conversion stage of an <a href="#proj-fpga">image decompressor</a>.</span></li>
               <li><span class="code placeholder">TODO</span><span class="cname">Embedded Systems</span></li>
               <li><span class="code">COMPENG 3DY4</span><span class="cname">Project course: real-time systems integration <span class="placeholder">TODO: confirm official title</span></span><span class="cnote">Real-time FM software-defined radio on a Raspberry Pi.</span></li>
             </ul>
@@ -567,7 +635,7 @@
             <ul class="courses">
               <li><span class="code">COMPENG 4SP4</span><span class="cname">High-Performance Programming</span><span class="cnote">Benchmarking with Google Benchmark and Linux perf counters on a SLURM-managed cluster.</span></li>
               <li><span class="code placeholder">TODO</span><span class="cname">Algorithm Design and Analysis</span></li>
-              <li><span class="code placeholder">TODO</span><span class="cname">Software Development</span></li>
+              <li><span class="code">SFWRENG 3K04</span><span class="cname">Software Development</span><span class="cnote">Pacemaker firmware and its controller app; see the <a href="#proj-pacemaker">project</a>.</span></li>
             </ul>
           </div>
           <div class="course-group" data-reveal>

@@ -765,6 +765,77 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
   .project-featured { grid-template-columns: 1.6fr 1fr; align-items: start; }
 }
 .project-featured .tags { margin-top: 1.25rem; padding-top: 0; }
+/* mirrored featured card: metrics on the left on wide screens */
+@media (min-width: 960px) {
+  .project-featured--alt { grid-template-columns: 1fr 1.6fr; }
+  .project-featured--alt .metrics { order: -1; }
+}
+
+/* decode pipeline: stages joined by arrows */
+.pipeline {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.pipeline li {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.pipeline li:not(:last-child)::after {
+  content: "→";
+  padding: 0 0.35rem;
+  color: var(--accent);
+}
+.pipeline span {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+.pipeline li:first-child span,
+.pipeline li:last-child span { border-color: var(--accent); color: var(--accent); font-weight: 500; }
+.pipeline small { font-size: 0.85em; opacity: 0.75; margin-left: 0.2rem; }
+
+/* milestone status: complete / partial / not implemented */
+.pipeline .is-done > span,
+.key-done::before { background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent); }
+.pipeline .is-partial > span,
+.key-partial::before { border: 1.5px dashed var(--accent); color: var(--accent); }
+.pipeline .is-skipped > span,
+.key-skipped::before { border: 1px dotted var(--ink-muted); color: var(--ink-muted); background: transparent; }
+
+.pipeline-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0.6rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+.key { display: inline-flex; align-items: center; gap: 0.35rem; }
+.key::before { content: ""; width: 0.8rem; height: 0.8rem; border-radius: 3px; }
+.key-done::before { color: transparent; }
+
+.project-aside code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 0 0.25rem;
+  border-radius: 3px;
+  background: var(--accent-soft);
+}
+
+.project-role { margin: 1rem 0 0; }
+/* in-page links target project titles; leave room for the kicker above them */
+.project h3[id] { scroll-margin-top: calc(var(--header-h) + 3rem); }
+.metric-unit { color: var(--ink-muted); font-size: 0.9rem; }
 
 .metrics {
   margin: 0;
