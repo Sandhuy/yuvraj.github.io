@@ -116,36 +116,7 @@
     Array.prototype.forEach.call(revealEls, function (el) { revealer.observe(el); });
   }
 
-  /* ---------- Oscilloscope traces ----------
-     CH1: FM signal  y = sin(2π·fc·x/W + β·sin(2π·x/W))
-     CH2: its demodulated message, proportional to the instantaneous
-          frequency deviation, i.e. cos(2π·x/W).
-     fc is a whole number of cycles per W, so the drawing repeats every W
-     and the CSS translateX(-W) loop is seamless. */
-  var W = 400, FC = 11, BETA = 4.5;
-  function tracePath(fn) {
-    var d = '';
-    for (var x = 0; x <= 2 * W; x += 1) {
-      d += (x === 0 ? 'M' : 'L') + x + ' ' + fn(x).toFixed(2);
-    }
-    return d;
-  }
-  var t1 = document.getElementById('trace-1');
-  var t1g = document.getElementById('trace-1-glow');
-  var t2 = document.getElementById('trace-2');
-  if (t1 && t2) {
-    var fm = tracePath(function (x) {
-      var p = 2 * Math.PI * x / W;
-      return 88 + 52 * Math.sin(FC * p + BETA * Math.sin(p));
-    });
-    t1.setAttribute('d', fm);
-    if (t1g) t1g.setAttribute('d', fm);
-    t2.setAttribute('d', tracePath(function (x) {
-      return 192 - 26 * Math.cos(2 * Math.PI * x / W);
-    }));
-  }
-
-  // pause the sweep while the scope is off-screen
+  // pause the hero bus demo (assets/js/bus-demo.js) while it is off-screen
   var scope = document.querySelector('.scope');
   if (scope && hasIO) {
     new IntersectionObserver(function (entries) {

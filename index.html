@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/scan-viewer.js" defer></script>
-  <script src="assets/js/logic-analyzer.js" defer></script>
+  <script src="assets/js/bus-demo.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -129,37 +129,13 @@
           </div>
         </div>
 
-        <figure class="scope" aria-label="Decorative oscilloscope showing an FM-modulated carrier and its demodulated message, above a logic analyzer decoding UART, SPI and I2C frames">
+        <figure class="scope" aria-label="Decorative animation: digital signals travel along circuit-board traces between a microcontroller and a peripheral chip, while a logic analyzer below decodes the UART, SPI and I2C traffic">
           <div class="scope-top" aria-hidden="true">
-            <span><b class="ch1">CH1</b> FM carrier</span>
-            <span>MODE 0 · 101 TAPS</span>
+            <span><b class="ch1">PCB</b> <span class="bus-route">MCU → USB-UART</span></span>
+            <span class="bus-proto">UART</span>
           </div>
-          <svg class="scope-screen" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
-            <defs>
-              <pattern id="grat-minor" width="8" height="8" patternUnits="userSpaceOnUse">
-                <path d="M8 0H0V8" fill="none" class="grat-minor"/>
-              </pattern>
-              <pattern id="grat-major" width="40" height="40" patternUnits="userSpaceOnUse">
-                <rect width="40" height="40" fill="url(#grat-minor)"/>
-                <path d="M40 0H0V40" fill="none" class="grat-major"/>
-              </pattern>
-              <clipPath id="scope-clip"><rect width="400" height="240"/></clipPath>
-            </defs>
-            <rect width="400" height="240" fill="url(#grat-major)"/>
-            <path d="M0 120H400M200 0V240" class="grat-axis"/>
-            <g clip-path="url(#scope-clip)">
-              <g class="scope-trace">
-                <path class="trace trace-1-glow" id="trace-1-glow"/>
-                <path class="trace trace-1" id="trace-1"/>
-                <path class="trace trace-2" id="trace-2"/>
-              </g>
-            </g>
-          </svg>
-          <div class="scope-bottom" aria-hidden="true">
-            <span><b class="ch2">CH2</b> demod</span>
-            <span>f<sub>c</sub> 107.1 MHz</span>
-          </div>
-          <!-- Logic analyzer strip: waveforms drawn by assets/js/logic-analyzer.js -->
+          <!-- Board and logic analyzer are both drawn by assets/js/bus-demo.js -->
+          <svg class="scope-screen board" viewBox="0 0 400 240" aria-hidden="true" focusable="false"></svg>
           <div class="la" aria-hidden="true">
             <div class="la-head">
               <span><b class="la-tag">LA</b> <span class="la-proto">UART · 115200 8N1</span></span>
