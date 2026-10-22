@@ -833,6 +833,77 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
 }
 
 .project-role { margin: 1rem 0 0; }
+
+/* full-width card in the project grid (text + 3D scan viewer) */
+.project-wide { grid-column: 1 / -1; display: grid; gap: 1.75rem; }
+@media (min-width: 900px) {
+  .project-wide { grid-template-columns: 1fr 1.15fr; align-items: start; }
+}
+.project-wide .tags { margin-top: 1.25rem; padding-top: 0; }
+
+.scan-viewer { margin: 0; }
+.scan-stage {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, #1C1620 0%, var(--scope-bg) 75%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.scan-canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.scan-canvas:active { cursor: grabbing; }
+.scan-canvas:focus-visible { outline-offset: -3px; outline-color: var(--scope-ch1); }
+.scan-status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--scope-text);
+  pointer-events: none;
+}
+.scan-viewer.is-empty .scan-stage {
+  background:
+    repeating-linear-gradient(135deg, rgba(253, 191, 87, 0.06) 0 10px, transparent 10px 20px),
+    var(--scope-bg);
+  outline: 1.5px dashed var(--scope-ch1);
+  outline-offset: -6px;
+}
+.scan-viewer.is-empty .scan-controls { display: none; }
+.scan-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.scan-controls button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: 500 0.9rem var(--font-body);
+  cursor: pointer;
+}
+.scan-controls button:hover { border-color: var(--accent); }
+.scan-controls [data-scan="spin"][aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.scan-viewer figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
 /* in-page links target project titles; leave room for the kicker above them */
 .project h3[id] { scroll-margin-top: calc(var(--header-h) + 3rem); }
 .metric-unit { color: var(--ink-muted); font-size: 0.9rem; }

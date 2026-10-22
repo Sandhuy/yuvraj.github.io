@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/scan-viewer.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -566,6 +567,39 @@
             </ul>
             <p class="project-links"><a href="#press">Read the coverage →</a></p>
           </article>
+
+          <!-- 2DX4: course-level description + facts read from the scan data itself (assets/data/2dx-scan.txt). -->
+          <article class="project project-wide" data-reveal aria-labelledby="proj-2dx">
+            <div class="project-wide-copy">
+              <p class="project-kicker">COMPENG 2DX4 · Microprocessor Systems Project</p>
+              <h3 id="proj-2dx">3D Spatial Mapping Device</h3>
+              <p>An embedded device that maps a space in 3D. A time-of-flight distance sensor on a stepper motor sweeps a full circle to measure one cross-section. Moving the device forward between sweeps builds up slices, which software on a PC stitches into a 3D point cloud.</p>
+              <ul class="project-points">
+                <li>Microcontroller firmware that steps the motor, reads the time-of-flight sensor over I2C, and streams the distance readings to a PC over UART.</li>
+                <li>Python on the PC that turns each distance and motor angle into x, y, z coordinates and renders the scan in 3D.</li>
+                <li>The scan shown here is real device output: <strong>4 sweeps of 32 readings each</strong> (one every 11.25°), taken 300&nbsp;mm apart.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Microcontroller</li><li>I2C</li><li>UART</li><li>Time-of-flight sensing</li><li>Stepper motor</li><li>Python</li>
+              </ul>
+            </div>
+
+            <!-- Point cloud viewer: loads x,y,z points (one per line; commas, spaces or tabs) from the file below. -->
+            <figure class="scan-viewer" data-scan-src="assets/data/2dx-scan.txt">
+              <div class="scan-stage">
+                <canvas class="scan-canvas" tabindex="0" role="img"
+                        aria-label="Interactive 3D point cloud from the device's scan. Use arrow keys to rotate, plus and minus to zoom, and 0 to reset."></canvas>
+                <p class="scan-status" aria-live="polite">Loading scan…</p>
+              </div>
+              <div class="scan-controls">
+                <button type="button" data-scan="zoom-in" aria-label="Zoom in">+</button>
+                <button type="button" data-scan="zoom-out" aria-label="Zoom out">−</button>
+                <button type="button" data-scan="spin" aria-pressed="true">Auto-rotate</button>
+                <button type="button" data-scan="reset">Reset view</button>
+              </div>
+              <figcaption>Point cloud recorded by the device, coloured by sweep. Drag to rotate; arrow keys also work when the view is focused.</figcaption>
+            </figure>
+          </article>
         </div>
       </div>
     </section>
@@ -620,34 +654,28 @@
           <p class="section-lede">Selected courses from the Computer Engineering &amp; Management program at McMaster University.</p>
         </header>
 
-        <!-- TODO: No transcript was provided. Course codes marked "TODO" and the Management group need filling in from your transcript. -->
         <div class="course-grid">
           <div class="course-group" data-reveal>
             <h3>Hardware &amp; digital systems</h3>
             <ul class="courses">
               <li><span class="code">COMPENG 3DQ5</span><span class="cname">Digital Systems Design</span><span class="cnote">FPGA design in SystemVerilog; built the upsampling and colour-conversion stage of an <a href="#proj-fpga">image decompressor</a>.</span></li>
-              <li><span class="code placeholder">TODO</span><span class="cname">Embedded Systems</span></li>
-              <li><span class="code">COMPENG 3DY4</span><span class="cname">Project course: real-time systems integration <span class="placeholder">TODO: confirm official title</span></span><span class="cnote">Real-time FM software-defined radio on a Raspberry Pi.</span></li>
+              <li><span class="code">COMPENG 4DS4</span><span class="cname">Embedded Systems</span></li>
+              <li><span class="code">COMPENG 3DY4</span><span class="cname">Computer Systems Integration Project</span><span class="cnote">Real-time FM software-defined radio on a Raspberry Pi; see the <a href="#proj-sdr">project</a>.</span></li>
+              <li><span class="code">COMPENG 2DX4</span><span class="cname">Microprocessor Systems Project</span><span class="cnote">Built a 3D spatial mapping device; see the <a href="#proj-2dx">project</a>.</span></li>
             </ul>
           </div>
           <div class="course-group" data-reveal>
             <h3>Software &amp; computing</h3>
             <ul class="courses">
               <li><span class="code">COMPENG 4SP4</span><span class="cname">High-Performance Programming</span><span class="cnote">Benchmarking with Google Benchmark and Linux perf counters on a SLURM-managed cluster.</span></li>
-              <li><span class="code placeholder">TODO</span><span class="cname">Algorithm Design and Analysis</span></li>
+              <li><span class="code">COMPENG 3SM4</span><span class="cname">Algorithm Design and Analysis</span><span class="cnote">Java labs with complexity analysis: a prefix-code tree with decoding, a max-heap and in-place heap sort, a red-black tree with insert and delete fix-ups, and shortest paths on a tile-map graph (BFS, DAG via topological sort, Dijkstra, Bellman-Ford with negative-cycle detection).</span></li>
               <li><span class="code">SFWRENG 3K04</span><span class="cname">Software Development</span><span class="cnote">Pacemaker firmware and its controller app; see the <a href="#proj-pacemaker">project</a>.</span></li>
             </ul>
           </div>
           <div class="course-group" data-reveal>
             <h3>Systems &amp; control</h3>
             <ul class="courses">
-              <li><span class="code placeholder">TODO</span><span class="cname">Introduction to Control Systems</span></li>
-            </ul>
-          </div>
-          <div class="course-group" data-reveal>
-            <h3>Management</h3>
-            <ul class="courses">
-              <li><span class="code placeholder">TODO</span><span class="cname placeholder">Add management courses from your transcript (e.g. accounting, finance, operations).</span></li>
+              <li><span class="code">ELECENG 3CL4</span><span class="cname">Introduction to Control Systems</span></li>
             </ul>
           </div>
         </div>
