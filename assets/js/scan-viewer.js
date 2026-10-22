@@ -82,7 +82,7 @@
         if (raw.length < 30) throw new Error('too few points');
         prepare(raw);
         setStatus('');
-        canvas.setAttribute('aria-label', 'Interactive 3D point cloud of ' + count + ' points in ' + slices.length + ' sweeps from the device\'s scan. Use arrow keys to rotate, plus and minus to zoom, and 0 to reset.');
+        canvas.setAttribute('aria-label', 'Interactive 3D point cloud of a hallway in McMaster\'s ETB building: ' + count + ' points in ' + slices.length + ' sweeps. Use arrow keys to rotate, plus and minus to zoom, and 0 to reset.');
         resize();
         loop();
       })

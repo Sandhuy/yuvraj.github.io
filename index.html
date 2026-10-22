@@ -34,13 +34,14 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/scan-viewer.js" defer></script>
+  <script src="assets/js/logic-analyzer.js" defer></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Yuvraj Sandhu",
-    "jobTitle": "Embedded Hardware Design Engineer",
+    "jobTitle": "Embedded Hardware Design Engineer Intern",
     "worksFor": { "@type": "Organization", "name": "Recon Intelligence Corporation" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "McMaster University" },
     "email": "mailto:yuvrajsandhu676@gmail.com",
@@ -111,7 +112,7 @@
         <div class="hero-copy">
           <p class="status">
             <span class="led" aria-hidden="true"></span>
-            Now: Embedded Hardware Design Engineer at Recon Intelligence
+            Now: Embedded Hardware Design Engineer Intern at Recon Intelligence
           </p>
           <h1 id="hero-title" class="hero-title">Yuvraj<br>Sandhu</h1>
           <p class="hero-role">Embedded hardware&nbsp;· firmware&nbsp;· test systems</p>
@@ -128,7 +129,7 @@
           </div>
         </div>
 
-        <figure class="scope" aria-label="Decorative oscilloscope showing an FM-modulated carrier on channel 1 and its demodulated message on channel 2">
+        <figure class="scope" aria-label="Decorative oscilloscope showing an FM-modulated carrier and its demodulated message, above a logic analyzer decoding UART, SPI and I2C frames">
           <div class="scope-top" aria-hidden="true">
             <span><b class="ch1">CH1</b> FM carrier</span>
             <span>MODE 0 · 101 TAPS</span>
@@ -158,6 +159,14 @@
             <span><b class="ch2">CH2</b> demod</span>
             <span>f<sub>c</sub> 107.1 MHz</span>
           </div>
+          <!-- Logic analyzer strip: waveforms drawn by assets/js/logic-analyzer.js -->
+          <div class="la" aria-hidden="true">
+            <div class="la-head">
+              <span><b class="la-tag">LA</b> <span class="la-proto">UART · 115200 8N1</span></span>
+              <span class="la-msg"></span>
+            </div>
+            <svg class="la-screen" viewBox="0 0 400 104" focusable="false"></svg>
+          </div>
         </figure>
       </div>
 
@@ -184,7 +193,7 @@
             <p>
               I'm a fifth-year Computer Engineering &amp; Management student at McMaster
               University, graduating in December 2026, and currently an Embedded Hardware
-              Design Engineer at Recon Intelligence Corporation in Calgary.
+              Design Engineer intern at Recon Intelligence Corporation in Calgary.
             </p>
             <p>
               I like work that crosses the hardware/software line. I've taken a NAND flash
@@ -194,9 +203,8 @@
               signal-processing code to run in real time on a Raspberry&nbsp;Pi.
             </p>
             <p>
-              The management half of my degree shows in how I work. At Toronto Hydro I
-              closed out more than 50 projects and mentored three new interns. Before
-              that, I helped design the
+              At Toronto Hydro I closed out more than 50 projects and mentored three new
+              interns. Before that, I helped design the
               <a href="#press">Canadian Remembrance Torch</a>, which was lit from the
               Centennial Flame on Parliament Hill in September 2022 to start a
               remembrance pilgrimage to the Netherlands.
@@ -213,7 +221,7 @@
             <dl class="facts">
               <div><dt>Program</dt><dd>B.Eng. Computer Engineering &amp; Management, McMaster University</dd></div>
               <div><dt>Graduating</dt><dd>December 2026</dd></div>
-              <div><dt>Currently</dt><dd>Embedded Hardware Design Engineer, Recon Intelligence (Calgary, AB)</dd></div>
+              <div><dt>Currently</dt><dd>Embedded Hardware Design Engineer Intern, Recon Intelligence (Calgary, AB)</dd></div>
               <div><dt>Focus</dt><dd>PCB design · embedded C/C++ · RF &amp; HIL test · FPGA</dd></div>
               <div><dt>Work status</dt><dd>U.S. citizen</dd></div>
             </dl>
@@ -236,7 +244,7 @@
           <li class="tl-item" data-reveal>
             <article class="tl-card">
               <header class="tl-head">
-                <h3>Embedded Hardware Design Engineer</h3>
+                <h3>Embedded Hardware Design Engineer <span class="tl-note">(Internship)</span></h3>
                 <p class="tl-org">Recon Intelligence Corporation</p>
                 <p class="tl-meta"><time datetime="2026-06">Jun 2026</time> – Present · Calgary, AB</p>
               </header>
@@ -575,12 +583,12 @@
               <h3 id="proj-2dx">3D Spatial Mapping Device</h3>
               <p>An embedded device that maps a space in 3D. A time-of-flight distance sensor on a stepper motor sweeps a full circle to measure one cross-section. Moving the device forward between sweeps builds up slices, which software on a PC stitches into a 3D point cloud.</p>
               <ul class="project-points">
-                <li>Microcontroller firmware that steps the motor, reads the time-of-flight sensor over I2C, and streams the distance readings to a PC over UART.</li>
+                <li>Firmware for a Texas Instruments <strong>MSP432E401Y</strong> microcontroller (MSP-EXP432E401Y LaunchPad) that steps the motor, reads the time-of-flight sensor over I2C, and streams the distance readings to a PC over UART.</li>
                 <li>Python on the PC that turns each distance and motor angle into x, y, z coordinates and renders the scan in 3D.</li>
-                <li>The scan shown here is real device output: <strong>4 sweeps of 32 readings each</strong> (one every 11.25°), taken 300&nbsp;mm apart.</li>
+                <li>The scan shown here is real device output from a hallway in McMaster's Engineering Technology Building (ETB): <strong>4 sweeps of 32 readings each</strong> (one every 11.25°), taken 300&nbsp;mm apart.</li>
               </ul>
               <ul class="tags" aria-label="Technologies">
-                <li>Microcontroller</li><li>I2C</li><li>UART</li><li>Time-of-flight sensing</li><li>Stepper motor</li><li>Python</li>
+                <li>TI MSP432E401Y</li><li>I2C</li><li>UART</li><li>Time-of-flight sensing</li><li>Stepper motor</li><li>Python</li>
               </ul>
             </div>
 
@@ -588,7 +596,7 @@
             <figure class="scan-viewer" data-scan-src="assets/data/2dx-scan.txt">
               <div class="scan-stage">
                 <canvas class="scan-canvas" tabindex="0" role="img"
-                        aria-label="Interactive 3D point cloud from the device's scan. Use arrow keys to rotate, plus and minus to zoom, and 0 to reset."></canvas>
+                        aria-label="Interactive 3D point cloud of a hallway in McMaster's ETB building, scanned by the device. Use arrow keys to rotate, plus and minus to zoom, and 0 to reset."></canvas>
                 <p class="scan-status" aria-live="polite">Loading scan…</p>
               </div>
               <div class="scan-controls">
@@ -597,7 +605,7 @@
                 <button type="button" data-scan="spin" aria-pressed="true">Auto-rotate</button>
                 <button type="button" data-scan="reset">Reset view</button>
               </div>
-              <figcaption>Point cloud recorded by the device, coloured by sweep. Drag to rotate; arrow keys also work when the view is focused.</figcaption>
+              <figcaption>Hallway in McMaster's Engineering Technology Building (ETB), as recorded by the device and coloured by sweep. Drag to rotate; arrow keys also work when the view is focused.</figcaption>
             </figure>
           </article>
         </div>
@@ -619,7 +627,7 @@
           </div>
           <div class="skill-group" data-reveal>
             <h3>Embedded &amp; firmware</h3>
-            <ul class="chips"><li>PIC24F</li><li>STM32</li><li>nRF52 (nRF Connect SDK)</li><li>ESP32</li><li>Zephyr RTOS</li><li>ROS</li><li>DFU &amp; remote flashing</li><li>ICSP / J-Link</li><li>SPI</li><li>I2C</li><li>UART</li><li>ONFI parallel NAND</li></ul>
+            <ul class="chips"><li>PIC24F</li><li>STM32</li><li>nRF52 (nRF Connect SDK)</li><li>ESP32</li><li>TI MSP432E401Y</li><li>NXP FRDM-K64F</li><li>Simulink &amp; Stateflow</li><li>Zephyr RTOS</li><li>ROS</li><li>DFU &amp; remote flashing</li><li>ICSP / J-Link</li><li>SPI</li><li>I2C</li><li>UART</li><li>ONFI parallel NAND</li></ul>
           </div>
           <div class="skill-group" data-reveal>
             <h3>FPGA &amp; digital design</h3>
