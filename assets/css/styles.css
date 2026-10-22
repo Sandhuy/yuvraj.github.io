@@ -629,15 +629,20 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
   padding: 1.25rem;
   box-shadow: var(--shadow);
 }
-.portrait {
-  aspect-ratio: 4 / 3;
+.portrait { margin: 0 0 1.25rem; }
+.portrait img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   border-radius: var(--radius-sm);
-  margin-bottom: 1.25rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  background: var(--surface-2);
 }
-.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.portrait figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
 .placeholder-media {
   background:
     repeating-linear-gradient(135deg, var(--accent-soft) 0 10px, transparent 10px 20px),
