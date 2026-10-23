@@ -519,36 +519,6 @@ html:not(.js) .nav-menu { display: flex; flex-wrap: wrap; position: static; box-
 .scope.is-paused .scope-trace { animation-play-state: paused; }
 @keyframes sweep { to { transform: translateX(-400px); } }
 
-/* Spec strip */
-.spec-strip {
-  list-style: none;
-  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;  /* fixed 1 → 2 → 4 steps so no empty cells show */
-  gap: 1px;                   /* 1px gaps over a line-coloured background = dividers */
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--line);
-  overflow: hidden;
-}
-.spec-strip li {
-  padding: 1.1rem 1.25rem;
-  background: var(--surface);
-  display: grid;
-  gap: 0.2rem;
-}
-.spec-strip strong {
-  font-family: var(--font-display);
-  font-stretch: 110%;
-  font-size: 1.75rem;
-  color: var(--accent);
-  line-height: 1.1;
-}
-.spec-strip span { color: var(--ink-muted); font-size: 0.95rem; line-height: 1.45; }
-@media (min-width: 560px) { .spec-strip { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .spec-strip { grid-template-columns: repeat(4, 1fr); } }
-
 /* ---------- Sections ---------- */
 .section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .section-alt { background: var(--bg-alt); }
