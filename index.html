@@ -6,8 +6,8 @@
   <title>Yuvraj Sandhu · Embedded Hardware &amp; Firmware Engineer</title>
   <meta name="description" content="Yuvraj Sandhu: Computer Engineering &amp; Management student at McMaster University (graduating December 2026) working across PCB design, embedded firmware, RF and hardware-in-the-loop test systems.">
   <meta name="author" content="Yuvraj Sandhu">
-  <meta name="theme-color" content="#F7F3EE" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141016" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAF9F6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131214" media="(prefers-color-scheme: dark)">
 
   <!-- Open Graph. TODO: once deployed, set og:url and add og:image (1200×630 PNG/JPG, absolute URL). -->
   <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&amp;family=Source+Sans+3:ital,wght@0,400..700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/scan-viewer.js" defer></script>
@@ -56,10 +56,7 @@
   <!-- ============================== HEADER / NAV ============================== -->
   <header class="site-header" id="top">
     <div class="container nav-bar">
-      <a class="brand" href="#top" aria-label="Yuvraj Sandhu, back to top">
-        <span class="brand-chip" aria-hidden="true">YS</span>
-        <span class="brand-name">Yuvraj Sandhu</span>
-      </a>
+      <a class="brand" href="#top" aria-label="Yuvraj Sandhu, back to top">Yuvraj Sandhu</a>
 
       <nav class="site-nav" aria-label="Primary">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
@@ -89,29 +86,10 @@
 
     <!-- ============================== HERO ============================== -->
     <section class="hero" aria-labelledby="hero-title">
-      <svg class="hero-traces" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-        <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M-20 90 H180 L240 150 H420"/>
-          <path d="M-20 130 H150 L210 190 H300 L330 220 V320"/>
-          <path d="M1220 80 H1010 L960 130 H860"/>
-          <path d="M1220 120 H1040 L990 170 V260 L1030 300 H1120"/>
-          <path d="M-20 600 H120 L180 540 H360 L400 500"/>
-          <path d="M1220 640 H980 L930 590 H760"/>
-          <path d="M1220 590 H1060 L1010 540 V470"/>
-          <path d="M600 720 V660 L640 620 H720"/>
-        </g>
-        <g class="vias">
-          <circle cx="420" cy="150" r="6"/><circle cx="330" cy="320" r="6"/>
-          <circle cx="860" cy="130" r="6"/><circle cx="1120" cy="300" r="6"/>
-          <circle cx="400" cy="500" r="6"/><circle cx="760" cy="590" r="6"/>
-          <circle cx="1010" cy="470" r="6"/><circle cx="720" cy="620" r="6"/>
-        </g>
-      </svg>
-
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="hero-title" class="hero-title">Yuvraj<br>Sandhu</h1>
           <p class="hero-role">Embedded hardware&nbsp;· firmware&nbsp;· test systems</p>
+          <h1 id="hero-title" class="hero-title">Yuvraj<br>Sandhu</h1>
           <p class="hero-lede">
             I design boards, write the firmware that runs on them, and build the test
             rigs that prove they work. Fifth-year Computer Engineering &amp; Management
@@ -174,7 +152,7 @@
           <h2 id="about-title">About me</h2>
         </header>
 
-        <div class="about-grid">
+        <div class="section-body about-grid">
           <div class="about-copy prose" data-reveal>
             <p>
               I'm a fifth-year Computer Engineering &amp; Management student at McMaster
@@ -204,7 +182,7 @@
             <figure class="portrait">
               <img src="assets/img/torch-princess-margriet-640.jpg"
                    srcset="assets/img/torch-princess-margriet-640.jpg 640w, assets/img/torch-princess-margriet-1200.jpg 1200w"
-                   sizes="(min-width: 900px) 360px, 90vw" width="640" height="426" loading="lazy" decoding="async"
+                   sizes="(min-width: 1180px) 320px, 90vw" width="640" height="426" loading="lazy" decoding="async"
                    alt="Yuvraj Sandhu and his fellow McMaster student designers presenting the lit Canadian Remembrance Torch to Princess Margriet of the Netherlands.">
               <figcaption>Presenting the Canadian Remembrance Torch to Princess Margriet of the Netherlands, September 2022.</figcaption>
             </figure>
@@ -221,160 +199,172 @@
     </section>
 
     <!-- ============================== EXPERIENCE ============================== -->
-    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+    <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <header class="section-head" data-reveal>
           <h2 id="experience-title">Where I've worked</h2>
           <p class="section-lede">From CNC post-processors to four-layer boards: six roles across manufacturing, utilities, test engineering and hardware design.</p>
         </header>
 
-        <ol class="timeline">
+        <ol class="section-body timeline">
           <!-- Recon -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>Embedded Hardware Design Engineer <span class="tl-note">(Internship)</span></h3>
-                <p class="tl-org">Recon Intelligence Corporation</p>
-                <p class="tl-meta"><time datetime="2026-06">Jun 2026</time> – Present · Calgary, AB</p>
-              </header>
-              <ul class="tl-points">
-                <li>Designed a complete USB-powered NAND flash data recovery device around a PIC24FJ microcontroller, owning schematic capture, design verification, BOM selection and four-layer PCB layout in Altium Designer, with high-speed communication as the priority.</li>
-                <li>Wrote embedded C firmware for the device's ONFI parallel NAND interface, tuning timing-critical bit-banged read sequences for maximum throughput.</li>
-                <li>Verified clocking, power and USB device configuration against manufacturer datasheets, and dispositioned a fifteen-item hardware design review with written justifications and corrective changes across power, protection and signal integrity.</li>
-              </ul>
-              <details class="tl-more">
-                <summary>More from this role</summary>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2026-06">Jun 2026</time> – Present</span> <span class="tl-where">Calgary, AB</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>Embedded Hardware Design Engineer <span class="tl-note">(Internship)</span></h3>
+                  <p class="tl-org">Recon Intelligence Corporation</p>
+                </header>
                 <ul class="tl-points">
-                  <li>Designed wiring harnesses and electrical schematics for mining machinery, plus wiring interconnects for strain gauges.</li>
-                  <li>Created manufacturing and assembly drawings to guide production of company hardware.</li>
+                  <li>Designed a complete USB-powered NAND flash data recovery device around a PIC24FJ microcontroller, owning schematic capture, design verification, BOM selection and four-layer PCB layout in Altium Designer, with high-speed communication as the priority.</li>
+                  <li>Wrote embedded C firmware for the device's ONFI parallel NAND interface, tuning timing-critical bit-banged read sequences for maximum throughput.</li>
+                  <li>Verified clocking, power and USB device configuration against manufacturer datasheets, and dispositioned a fifteen-item hardware design review with written justifications and corrective changes across power, protection and signal integrity.</li>
                 </ul>
-              </details>
-              <ul class="tags" aria-label="Technologies">
-                <li>PIC24F</li><li>Altium Designer</li><li>Embedded C</li><li>ONFI NAND</li><li>USB</li><li>Signal integrity</li>
-              </ul>
+                <details class="tl-more">
+                  <summary>More from this role</summary>
+                  <ul class="tl-points">
+                    <li>Designed wiring harnesses and electrical schematics for mining machinery, plus wiring interconnects for strain gauges.</li>
+                    <li>Created manufacturing and assembly drawings to guide production of company hardware.</li>
+                  </ul>
+                </details>
+                <ul class="tags" aria-label="Technologies">
+                  <li>PIC24F</li><li>Altium Designer</li><li>Embedded C</li><li>ONFI NAND</li><li>USB</li><li>Signal integrity</li>
+                </ul>
+              </div>
             </article>
           </li>
 
           <!-- JDRF contract -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>System Validation Engineer <span class="tl-note">(Part-time contract)</span></h3>
-                <p class="tl-org">JDRF Electromag Engineering Inc.</p>
-                <p class="tl-meta"><time datetime="2026-01">Jan 2026</time> – <time datetime="2026-02">Feb 2026</time> · Mississauga, ON</p>
-              </header>
-              <ul class="tl-points">
-                <li>Integrated CI/CD pipelines with J-Link flash testing to automate firmware deployment and validation, raising test-bench throughput and supporting on-time order fulfilment.</li>
-                <li>Built remote-flashing and device firmware update (DFU) libraries for STM32 and nRF microcontrollers.</li>
-                <li>Refined Azure-based firmware pipelines to automatically locate and identify failing deployed products.</li>
-              </ul>
-              <details class="tl-more">
-                <summary>More from this role</summary>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2026-01">Jan 2026</time> – <time datetime="2026-02">Feb 2026</time></span> <span class="tl-where">Mississauga, ON</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>System Validation Engineer <span class="tl-note">(Part-time contract)</span></h3>
+                  <p class="tl-org">JDRF Electromag Engineering Inc.</p>
+                </header>
                 <ul class="tl-points">
-                  <li>Traced prototype defects to root cause by analyzing large-scale test data against hardware schematics, defining error tolerances for end-to-end platform assurance.</li>
-                  <li>Performed PCB analysis and rework soldering for RMA repairs and defect isolation.</li>
+                  <li>Integrated CI/CD pipelines with J-Link flash testing to automate firmware deployment and validation, raising test-bench throughput and supporting on-time order fulfilment.</li>
+                  <li>Built remote-flashing and device firmware update (DFU) libraries for STM32 and nRF microcontrollers.</li>
+                  <li>Refined Azure-based firmware pipelines to automatically locate and identify failing deployed products.</li>
                 </ul>
-              </details>
-              <ul class="tags" aria-label="Technologies">
-                <li>J-Link</li><li>Azure Pipelines</li><li>DFU</li><li>STM32</li><li>nRF52</li><li>PCB rework</li>
-              </ul>
+                <details class="tl-more">
+                  <summary>More from this role</summary>
+                  <ul class="tl-points">
+                    <li>Traced prototype defects to root cause by analyzing large-scale test data against hardware schematics, defining error tolerances for end-to-end platform assurance.</li>
+                    <li>Performed PCB analysis and rework soldering for RMA repairs and defect isolation.</li>
+                  </ul>
+                </details>
+                <ul class="tags" aria-label="Technologies">
+                  <li>J-Link</li><li>Azure Pipelines</li><li>DFU</li><li>STM32</li><li>nRF52</li><li>PCB rework</li>
+                </ul>
+              </div>
             </article>
           </li>
 
           <!-- JDRF intern -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>Research &amp; Design Lab Engineering Intern</h3>
-                <p class="tl-org">JDRF Electromag Engineering Inc.</p>
-                <p class="tl-meta"><time datetime="2025-06">Jun 2025</time> – <time datetime="2026-01">Jan 2026</time> · Mississauga, ON</p>
-              </header>
-              <ul class="tl-points">
-                <li>Designed and deployed a multithreaded C# (.NET Framework) Windows GUI application that tests WiFi/LTE routers over DHCP, TCP and UDP, making end-to-end validation <strong>10× faster</strong>.</li>
-                <li>Integrated oscilloscopes, a Signal Hound SA44B spectrum analyzer, a Keysight DAQ970A and AC power supplies over TCP using Python, LabVIEW and NI TestStand, enabling hardware-in-the-loop QA testing, NFC and RF product characterization, and automated data analysis.</li>
-                <li>Wrote RF test firmware and libraries in Python and C++ that set the LTE modem's and BLE radio's transmit power (dBm) and frequency across all 2.4&nbsp;GHz BLE channels and the 1.9&nbsp;GHz cellular band.</li>
-              </ul>
-              <details class="tl-more">
-                <summary>More from this role</summary>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2025-06">Jun 2025</time> – <time datetime="2026-01">Jan 2026</time></span> <span class="tl-where">Mississauga, ON</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>Research &amp; Design Lab Engineering Intern</h3>
+                  <p class="tl-org">JDRF Electromag Engineering Inc.</p>
+                </header>
                 <ul class="tl-points">
-                  <li>Wrote Python test scripts for router verification on Linux, and created Azure Pipelines to flash routers remotely during testing.</li>
-                  <li>Co-developed the router test plan and helped design its RF test fixture, running programmatic RF tests to select fixture components.</li>
-                  <li>Built a second multithreaded C# application for HIL testing of Bluetooth sensor modules over NFC and UART, designed for real-time systems that need precise timing.</li>
-                  <li>Developed I2C and SPI communications for the sensor-module PCB, and designed a data structure that packs image data over NFC for RMSE analysis and validation.</li>
-                  <li>Set automated pass/fail limits through statistical analysis of test data in Python and Excel, and wrote SQL queries to track and update a database of tested products.</li>
-                  <li>Authored reusable Python and LabVIEW API libraries, version-controlled in Git, for the customer-facing Field Application Engineering team, and contributed to public Python libraries.</li>
+                  <li>Designed and deployed a multithreaded C# (.NET Framework) Windows GUI application that tests WiFi/LTE routers over DHCP, TCP and UDP, making end-to-end validation <strong>10× faster</strong>.</li>
+                  <li>Integrated oscilloscopes, a Signal Hound SA44B spectrum analyzer, a Keysight DAQ970A and AC power supplies over TCP using Python, LabVIEW and NI TestStand, enabling hardware-in-the-loop QA testing, NFC and RF product characterization, and automated data analysis.</li>
+                  <li>Wrote RF test firmware and libraries in Python and C++ that set the LTE modem's and BLE radio's transmit power (dBm) and frequency across all 2.4&nbsp;GHz BLE channels and the 1.9&nbsp;GHz cellular band.</li>
                 </ul>
-              </details>
-              <ul class="tags" aria-label="Technologies">
-                <li>C# / .NET</li><li>Python</li><li>LabVIEW</li><li>NI TestStand</li><li>HIL testing</li><li>BLE</li><li>LTE</li><li>NFC</li><li>SQL</li>
-              </ul>
+                <details class="tl-more">
+                  <summary>More from this role</summary>
+                  <ul class="tl-points">
+                    <li>Wrote Python test scripts for router verification on Linux, and created Azure Pipelines to flash routers remotely during testing.</li>
+                    <li>Co-developed the router test plan and helped design its RF test fixture, running programmatic RF tests to select fixture components.</li>
+                    <li>Built a second multithreaded C# application for HIL testing of Bluetooth sensor modules over NFC and UART, designed for real-time systems that need precise timing.</li>
+                    <li>Developed I2C and SPI communications for the sensor-module PCB, and designed a data structure that packs image data over NFC for RMSE analysis and validation.</li>
+                    <li>Set automated pass/fail limits through statistical analysis of test data in Python and Excel, and wrote SQL queries to track and update a database of tested products.</li>
+                    <li>Authored reusable Python and LabVIEW API libraries, version-controlled in Git, for the customer-facing Field Application Engineering team, and contributed to public Python libraries.</li>
+                  </ul>
+                </details>
+                <ul class="tags" aria-label="Technologies">
+                  <li>C# / .NET</li><li>Python</li><li>LabVIEW</li><li>NI TestStand</li><li>HIL testing</li><li>BLE</li><li>LTE</li><li>NFC</li><li>SQL</li>
+                </ul>
+              </div>
             </article>
           </li>
 
           <!-- Toronto Hydro -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>Data Analytics Intern</h3>
-                <p class="tl-org">Toronto Hydro</p>
-                <p class="tl-meta"><time datetime="2023-05">May 2023</time> – <time datetime="2024-08">Aug 2024</time> · Toronto, ON</p>
-              </header>
-              <ul class="tl-points">
-                <li>Developed a Python automation application with a Qt GUI that gathers project data through SQL queries and processes it in Pandas and NumPy pipelines, <strong>cutting manual data entry by 50%</strong>.</li>
-                <li>Automated the invoicing process for Metrolinx, streamlining the team's workflow and reducing manual errors.</li>
-                <li>Managed the closeout of <strong>50+ projects</strong> collectively valued at over $1 million.</li>
-              </ul>
-              <details class="tl-more">
-                <summary>More from this role</summary>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2023-05">May 2023</time> – <time datetime="2024-08">Aug 2024</time></span> <span class="tl-where">Toronto, ON</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>Data Analytics Intern</h3>
+                  <p class="tl-org">Toronto Hydro</p>
+                </header>
                 <ul class="tl-points">
-                  <li>Implemented statistical models and trend analysis in Python and Excel to forecast Light Rail Transit (LRT) project costs, improving planning accuracy and financial oversight.</li>
-                  <li>Performed load calculations, design reviews and cost estimates for multi-million-dollar infrastructure projects.</li>
-                  <li>Mentored and trained three new interns over four months.</li>
+                  <li>Developed a Python automation application with a Qt GUI that gathers project data through SQL queries and processes it in Pandas and NumPy pipelines, <strong>cutting manual data entry by 50%</strong>.</li>
+                  <li>Automated the invoicing process for Metrolinx, streamlining the team's workflow and reducing manual errors.</li>
+                  <li>Managed the closeout of <strong>50+ projects</strong> collectively valued at over $1 million.</li>
                 </ul>
-              </details>
-              <p class="tl-link"><a href="#references">Read my manager's reference →</a></p>
-              <ul class="tags" aria-label="Technologies">
-                <li>Python</li><li>Qt</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Excel</li><li>Forecasting</li>
-              </ul>
+                <details class="tl-more">
+                  <summary>More from this role</summary>
+                  <ul class="tl-points">
+                    <li>Implemented statistical models and trend analysis in Python and Excel to forecast Light Rail Transit (LRT) project costs, improving planning accuracy and financial oversight.</li>
+                    <li>Performed load calculations, design reviews and cost estimates for multi-million-dollar infrastructure projects.</li>
+                    <li>Mentored and trained three new interns over four months.</li>
+                  </ul>
+                </details>
+                <p class="tl-link"><a href="#references">Read my manager's reference →</a></p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Python</li><li>Qt</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Excel</li><li>Forecasting</li>
+                </ul>
+              </div>
             </article>
           </li>
 
           <!-- Torch -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>Research &amp; Design Lab Engineering Intern</h3>
-                <p class="tl-org">The Canadian Remembrance Torch</p>
-                <p class="tl-meta"><time datetime="2021-10">Oct 2021</time> – <time datetime="2022-11">Nov 2022</time> · Hamilton, ON</p>
-              </header>
-              <ul class="tl-points">
-                <li>Designed an Arduino Nano–based embedded system end to end, from custom PCB to C++ firmware, for real-time heart-rate acquisition and LED-array visualization, with an on-device ML model that classifies signal quality to reject noisy readings.</li>
-                <li>Implemented power-management algorithms and refined sensor calibration for a <strong>60% increase in battery life</strong> and reliable operation under thermal stress.</li>
-                <li>Designed the torch's outer body and shell in Autodesk Fusion and AutoCAD for outdoor, ergonomic use.</li>
-              </ul>
-              <p class="tl-link"><a href="#press">See the press coverage →</a></p>
-              <ul class="tags" aria-label="Technologies">
-                <li>Arduino Nano</li><li>C++</li><li>PCB design</li><li>On-device ML</li><li>Power management</li><li>Autodesk Fusion</li>
-              </ul>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2021-10">Oct 2021</time> – <time datetime="2022-11">Nov 2022</time></span> <span class="tl-where">Hamilton, ON</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>Research &amp; Design Lab Engineering Intern</h3>
+                  <p class="tl-org">The Canadian Remembrance Torch</p>
+                </header>
+                <ul class="tl-points">
+                  <li>Designed an Arduino Nano–based embedded system end to end, from custom PCB to C++ firmware, for real-time heart-rate acquisition and LED-array visualization, with an on-device ML model that classifies signal quality to reject noisy readings.</li>
+                  <li>Implemented power-management algorithms and refined sensor calibration for a <strong>60% increase in battery life</strong> and reliable operation under thermal stress.</li>
+                  <li>Designed the torch's outer body and shell in Autodesk Fusion and AutoCAD for outdoor, ergonomic use.</li>
+                </ul>
+                <p class="tl-link"><a href="#press">See the press coverage →</a></p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Arduino Nano</li><li>C++</li><li>PCB design</li><li>On-device ML</li><li>Power management</li><li>Autodesk Fusion</li>
+                </ul>
+              </div>
             </article>
           </li>
 
           <!-- MAV -->
           <li class="tl-item" data-reveal>
             <article class="tl-card">
-              <header class="tl-head">
-                <h3>Software Engineer</h3>
-                <p class="tl-org">MAV Woodworking</p>
-                <p class="tl-meta"><time datetime="2019-06">Jun 2019</time> – <time datetime="2020-09">Sep 2020</time> · Bolton, ON</p>
-              </header>
-              <ul class="tl-points">
-                <li>Developed post-processors in Java for SCM CNC machines, translating CAM toolpaths into machine-specific code.</li>
-                <li>Wrote machining programs and macros in SCM's C#-based Maestro Scripting Language (MSL), defining workpieces, geometry, and drilling and routing operations in code.</li>
-                <li>Created Python interfaces to SCM Maestro CAD/CAM software for custom designs, and ran machine simulations in Autodesk Fusion.</li>
-              </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>Java</li><li>C# (MSL)</li><li>Python</li><li>CNC / CAM</li><li>Autodesk Fusion</li>
-              </ul>
+              <p class="tl-meta"><span class="tl-when"><time datetime="2019-06">Jun 2019</time> – <time datetime="2020-09">Sep 2020</time></span> <span class="tl-where">Bolton, ON</span></p>
+              <div class="tl-main">
+                <header class="tl-head">
+                  <h3>Software Engineer</h3>
+                  <p class="tl-org">MAV Woodworking</p>
+                </header>
+                <ul class="tl-points">
+                  <li>Developed post-processors in Java for SCM CNC machines, translating CAM toolpaths into machine-specific code.</li>
+                  <li>Wrote machining programs and macros in SCM's C#-based Maestro Scripting Language (MSL), defining workpieces, geometry, and drilling and routing operations in code.</li>
+                  <li>Created Python interfaces to SCM Maestro CAD/CAM software for custom designs, and ran machine simulations in Autodesk Fusion.</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Java</li><li>C# (MSL)</li><li>Python</li><li>CNC / CAM</li><li>Autodesk Fusion</li>
+                </ul>
+              </div>
             </article>
           </li>
         </ol>
@@ -389,134 +379,134 @@
           <p class="section-lede">Real-time DSP, FPGA hardware, low-power wireless and pacemaker firmware, built for coursework and capstone.</p>
         </header>
 
-        <!-- Featured: SDR (source: project-group-37-wednesday/doc) -->
-        <article class="project project-featured" data-reveal aria-labelledby="proj-sdr">
-          <div class="project-body">
-            <p class="project-kicker">Featured · COMPENG 3DY4 · Winter 2026 · Team of 4</p>
-            <h3 id="proj-sdr">Real-Time FM Software-Defined Radio</h3>
-            <p>
-              An FM receiver built in software. It takes raw I/Q samples from an RTL-SDR
-              dongle and produces mono audio, stereo audio and Radio Data System (RDS) data
-              in real time on a Raspberry&nbsp;Pi&nbsp;4. It supports four sample-rate modes,
-              and the filter length scales from 75 to 101 taps as the CPU clock is lowered
-              from 1.5&nbsp;GHz to 600&nbsp;MHz.
-            </p>
-            <h4>What I built</h4>
-            <ul class="project-points">
-              <li>The C++ <strong>stereo path</strong>: mixer, sample-rate-conversion filtering, stereo combiner, and the PLL and delay-block functions that recover the 38&nbsp;kHz carrier and keep the mono and stereo channels aligned.</li>
-              <li>The C++ <strong>mono path</strong> for modes 0 and 1.</li>
-              <li><strong>Multithreading</strong>: split the RF front end and audio processing into producer and consumer threads, joined by a thread-safe queue (mutex and condition variable).</li>
-              <li><strong>Loop unrolling</strong> of the FIR convolution, the main hot spot in the signal chain.</li>
-              <li>The RDS <strong>Python model</strong> from Manchester decoding through the application layer, which decodes the station's PI code, program type and program-service name.</li>
-            </ul>
-            <p class="project-aside">
-              <strong>Hardest bug:</strong> the left and right channels kept bleeding into
-              each other. The cause was the mono delay block, which was being delayed by
-              <em>taps × U</em> instead of <em>taps / 2</em>. That put mono about 30&nbsp;ms out
-              of phase with stereo and wiped out the channel separation.
-            </p>
-            <ul class="tags" aria-label="Technologies">
-              <li>C++</li><li>Python</li><li>Multithreading</li><li>FIR filters</li><li>PLL / NCO</li><li>Rational resampling</li><li>Raspberry Pi</li><li>RTL-SDR</li>
-            </ul>
-            <!-- TODO: The repository is a private course repo (3dy4-2026 org) and the report lists every
-                 member's student number. Link a sanitized write-up or demo video here instead. -->
-            <p class="project-links"><span class="muted">Source is in a private course repository; available on request.</span></p>
-          </div>
-          <dl class="metrics" aria-label="Measured results, mode 0 at 101 taps">
-            <div>
-              <dt>Mono block time</dt>
-              <dd><span class="metric-from">2.671</span> → <strong>1.819 ms</strong></dd>
-              <dd class="metric-note">−32% with loop unrolling</dd>
+        <div class="section-body">
+          <!-- Featured: SDR (source: project-group-37-wednesday/doc) -->
+          <article class="project project-featured" data-reveal aria-labelledby="proj-sdr">
+            <div class="project-body">
+              <p class="project-kicker">Featured · COMPENG 3DY4 · Winter 2026 · Team of 4</p>
+              <h3 id="proj-sdr">Real-Time FM Software-Defined Radio</h3>
+              <p>
+                An FM receiver built in software. It takes raw I/Q samples from an RTL-SDR
+                dongle and produces mono audio, stereo audio and Radio Data System (RDS) data
+                in real time on a Raspberry&nbsp;Pi&nbsp;4. It supports four sample-rate modes,
+                and the filter length scales from 75 to 101 taps as the CPU clock is lowered
+                from 1.5&nbsp;GHz to 600&nbsp;MHz.
+              </p>
+              <h4>What I built</h4>
+              <ul class="project-points">
+                <li>The C++ <strong>stereo path</strong>: mixer, sample-rate-conversion filtering, stereo combiner, and the PLL and delay-block functions that recover the 38&nbsp;kHz carrier and keep the mono and stereo channels aligned.</li>
+                <li>The C++ <strong>mono path</strong> for modes 0 and 1.</li>
+                <li><strong>Multithreading</strong>: split the RF front end and audio processing into producer and consumer threads, joined by a thread-safe queue (mutex and condition variable).</li>
+                <li><strong>Loop unrolling</strong> of the FIR convolution, the main hot spot in the signal chain.</li>
+                <li>The RDS <strong>Python model</strong> from Manchester decoding through the application layer, which decodes the station's PI code, program type and program-service name.</li>
+              </ul>
+              <p class="project-aside">
+                <strong>Hardest bug:</strong> the left and right channels kept bleeding into
+                each other. The cause was the mono delay block, which was being delayed by
+                <em>taps × U</em> instead of <em>taps / 2</em>. That put mono about 30&nbsp;ms out
+                of phase with stereo and wiped out the channel separation.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>C++</li><li>Python</li><li>Multithreading</li><li>FIR filters</li><li>PLL / NCO</li><li>Rational resampling</li><li>Raspberry Pi</li><li>RTL-SDR</li>
+              </ul>
+              <!-- TODO: The repository is a private course repo (3dy4-2026 org) and the report lists every
+                   member's student number. Link a sanitized write-up or demo video here instead. -->
+              <p class="project-links"><span class="muted">Source is in a private course repository; available on request.</span></p>
             </div>
-            <div>
-              <dt>Stereo block time</dt>
-              <dd><span class="metric-from">4.754</span> → <strong>3.105 ms</strong></dd>
-              <dd class="metric-note">−35% with loop unrolling</dd>
-            </div>
-            <div>
-              <dt>Operating modes</dt>
-              <dd><strong>4</strong></dd>
-              <dd class="metric-note">RF 1.536–2.56 MS/s → audio 32–48 kS/s</dd>
-            </div>
-            <div>
-              <dt>CPU range</dt>
-              <dd><strong>0.6–1.5 GHz</strong></dd>
-              <dd class="metric-note">75–101 filter taps</dd>
-            </div>
-          </dl>
-        </article>
+            <dl class="metrics" aria-label="Measured results, mode 0 at 101 taps">
+              <div>
+                <dt>Mono block time</dt>
+                <dd><span class="metric-from">2.671</span> → <strong>1.819 ms</strong></dd>
+                <dd class="metric-note">−32% with loop unrolling</dd>
+              </div>
+              <div>
+                <dt>Stereo block time</dt>
+                <dd><span class="metric-from">4.754</span> → <strong>3.105 ms</strong></dd>
+                <dd class="metric-note">−35% with loop unrolling</dd>
+              </div>
+              <div>
+                <dt>Operating modes</dt>
+                <dd><strong>4</strong></dd>
+                <dd class="metric-note">RF 1.536–2.56 MS/s → audio 32–48 kS/s</dd>
+              </div>
+              <div>
+                <dt>CPU range</dt>
+                <dd><strong>0.6–1.5 GHz</strong></dd>
+                <dd class="metric-note">75–101 filter taps</dd>
+              </div>
+            </dl>
+          </article>
 
-        <!-- Featured: FPGA (source: Group 55 final report + M1_interface.sv / M2_interface.sv / project.sv) -->
-        <article class="project project-featured project-featured--alt" data-reveal aria-labelledby="proj-fpga">
-          <div class="project-body">
-            <p class="project-kicker">Featured · COMPENG 3DQ5 · Fall 2024 · Team of 2</p>
-            <h3 id="proj-fpga">FPGA Image Decompressor</h3>
-            <p>
-              Hardware, written in SystemVerilog with my partner Lisa Chtcherbakova, that
-              turns a compressed 320×240 image back into RGB pixels on an FPGA. The
-              compressed image arrives over UART into external SRAM, and the decoded pixels
-              are written back to SRAM for the VGA controller to display. We completed and
-              verified Milestone&nbsp;1 (upsampling and colour-space conversion) and partially
-              completed Milestone&nbsp;2 (the inverse DCT).
-            </p>
-            <ol class="pipeline" aria-label="Decoder stages in order, with how far each got">
-              <li><span>UART in</span></li>
-              <li><span>SRAM</span></li>
-              <li class="is-skipped"><span>Lossless decode <small>M3</small><span class="visually-hidden"> (not implemented)</span></span></li>
-              <li class="is-partial"><span>Inverse DCT <small>M2</small><span class="visually-hidden"> (partially complete)</span></span></li>
-              <li class="is-done"><span>Upsample + YUV→RGB <small>M1</small><span class="visually-hidden"> (complete)</span></span></li>
-              <li><span>VGA out</span></li>
-            </ol>
-            <p class="pipeline-key" aria-hidden="true">
-              <span class="key key-done">Complete</span>
-              <span class="key key-partial">Partial</span>
-              <span class="key key-skipped">Not implemented</span>
-            </p>
-            <h4>What I built</h4>
-            <ul class="project-points">
-              <li><strong>Milestone 1, co-designed and co-written with my partner.</strong> A six-clock-cycle "common case" turns out one even/odd RGB pixel pair using three shared multipliers. It repeats 160 times per row for all 240 rows, overlapping Y, U and V SRAM reads with packed RGB writes.</li>
-              <li><strong>Interpolation that exploits symmetry.</strong> Odd U′/V′ samples come from a 6-tap filter (coefficients 21, −52, 159). Mirrored samples (j±1, j±3, j±5) are summed before multiplying, which halves the multiplies, and they come from a sliding window of six U and six V registers.</li>
-              <li><strong>Row-edge handling.</strong> Six special-case codes clamp the filter window at the start and end of every row, so edge pixels reuse the nearest valid sample.</li>
-              <li><strong>Colour conversion with clipping.</strong> Fixed-point YUV→RGB accumulates over several cycles, then each channel is saturated to 0–255 before two channels are packed into each 16-bit SRAM write.</li>
-              <li><strong>Milestone 2, my part.</strong> I worked on the logic that fetches 8×8 blocks of S′ from SRAM into dual-port embedded RAM, and on the first matrix multiplication (T&nbsp;=&nbsp;S′·C) using three multipliers and a cosine-coefficient lookup table. My partner took the second stage.</li>
-            </ul>
-            <p class="project-aside">
-              <strong>How we worked:</strong> we planned every clock cycle in a spreadsheet
-              state table before writing any SystemVerilog: which multiplier computes what, when each SRAM read lands, and when each write goes out. In the final
-              schedule, all three multipliers are busy in five of the six cycles. We then derived the
-              Milestone&nbsp;1 latency by hand and confirmed it in simulation (4,608.28&nbsp;µs,
-              or 20&nbsp;ns per cycle at 50&nbsp;MHz). We traced the critical path from a multiplier input
-              to the <code>result_Go</code> accumulator through 17 interconnect hops.
-            </p>
-            <ul class="tags" aria-label="Technologies">
-              <li>SystemVerilog</li><li>Intel Quartus</li><li>ModelSim</li><li>Cyclone II</li><li>Fixed-point DSP</li><li>Dual-port RAM</li><li>SRAM</li><li>UART</li><li>VGA</li>
-            </ul>
-          </div>
-          <dl class="metrics" aria-label="Milestone 1 results, from the final report">
-            <div>
-              <dt>Multiplier use</dt>
-              <dd><strong>88.9%</strong></dd>
-              <dd class="metric-note">3 shared multipliers; the target was 75%</dd>
+          <!-- Featured: FPGA (source: Group 55 final report + M1_interface.sv / M2_interface.sv / project.sv) -->
+          <article class="project project-featured" data-reveal aria-labelledby="proj-fpga">
+            <div class="project-body">
+              <p class="project-kicker">Featured · COMPENG 3DQ5 · Fall 2024 · Team of 2</p>
+              <h3 id="proj-fpga">FPGA Image Decompressor</h3>
+              <p>
+                Hardware, written in SystemVerilog with my partner Lisa Chtcherbakova, that
+                turns a compressed 320×240 image back into RGB pixels on an FPGA. The
+                compressed image arrives over UART into external SRAM, and the decoded pixels
+                are written back to SRAM for the VGA controller to display. We completed and
+                verified Milestone&nbsp;1 (upsampling and colour-space conversion) and partially
+                completed Milestone&nbsp;2 (the inverse DCT).
+              </p>
+              <ol class="pipeline" aria-label="Decoder stages in order, with how far each got">
+                <li><span>UART in</span></li>
+                <li><span>SRAM</span></li>
+                <li class="is-skipped"><span>Lossless decode <small>M3</small><span class="visually-hidden"> (not implemented)</span></span></li>
+                <li class="is-partial"><span>Inverse DCT <small>M2</small><span class="visually-hidden"> (partially complete)</span></span></li>
+                <li class="is-done"><span>Upsample + YUV→RGB <small>M1</small><span class="visually-hidden"> (complete)</span></span></li>
+                <li><span>VGA out</span></li>
+              </ol>
+              <p class="pipeline-key" aria-hidden="true">
+                <span class="key key-done">Complete</span>
+                <span class="key key-partial">Partial</span>
+                <span class="key key-skipped">Not implemented</span>
+              </p>
+              <h4>What I built</h4>
+              <ul class="project-points">
+                <li><strong>Milestone 1, co-designed and co-written with my partner.</strong> A six-clock-cycle "common case" turns out one even/odd RGB pixel pair using three shared multipliers. It repeats 160 times per row for all 240 rows, overlapping Y, U and V SRAM reads with packed RGB writes.</li>
+                <li><strong>Interpolation that exploits symmetry.</strong> Odd U′/V′ samples come from a 6-tap filter (coefficients 21, −52, 159). Mirrored samples (j±1, j±3, j±5) are summed before multiplying, which halves the multiplies, and they come from a sliding window of six U and six V registers.</li>
+                <li><strong>Row-edge handling.</strong> Six special-case codes clamp the filter window at the start and end of every row, so edge pixels reuse the nearest valid sample.</li>
+                <li><strong>Colour conversion with clipping.</strong> Fixed-point YUV→RGB accumulates over several cycles, then each channel is saturated to 0–255 before two channels are packed into each 16-bit SRAM write.</li>
+                <li><strong>Milestone 2, my part.</strong> I worked on the logic that fetches 8×8 blocks of S′ from SRAM into dual-port embedded RAM, and on the first matrix multiplication (T&nbsp;=&nbsp;S′·C) using three multipliers and a cosine-coefficient lookup table. My partner took the second stage.</li>
+              </ul>
+              <p class="project-aside">
+                <strong>How we worked:</strong> we planned every clock cycle in a spreadsheet
+                state table before writing any SystemVerilog: which multiplier computes what, when each SRAM read lands, and when each write goes out. In the final
+                schedule, all three multipliers are busy in five of the six cycles. We then derived the
+                Milestone&nbsp;1 latency by hand and confirmed it in simulation (4,608.28&nbsp;µs,
+                or 20&nbsp;ns per cycle at 50&nbsp;MHz). We traced the critical path from a multiplier input
+                to the <code>result_Go</code> accumulator through 17 interconnect hops.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>SystemVerilog</li><li>Intel Quartus</li><li>ModelSim</li><li>Cyclone II</li><li>Fixed-point DSP</li><li>Dual-port RAM</li><li>SRAM</li><li>UART</li><li>VGA</li>
+              </ul>
             </div>
-            <div>
-              <dt>Latency</dt>
-              <dd><strong>230,414</strong> <span class="metric-unit">cycles</span></dd>
-              <dd class="metric-note">≈4.61 ms per image at 50 MHz, confirmed in simulation</dd>
-            </div>
-            <div>
-              <dt>Throughput</dt>
-              <dd><strong>2 px</strong> <span class="metric-unit">/ 6 cycles</span></dd>
-              <dd class="metric-note">One even/odd RGB pair per common case</dd>
-            </div>
-            <div>
-              <dt>Area</dt>
-              <dd><strong>2,407</strong> <span class="metric-unit">LEs</span></dd>
-              <dd class="metric-note">1,110 registers after Milestone 1, up from 616 / 369</dd>
-            </div>
-          </dl>
-        </article>
+            <dl class="metrics" aria-label="Milestone 1 results, from the final report">
+              <div>
+                <dt>Multiplier use</dt>
+                <dd><strong>88.9%</strong></dd>
+                <dd class="metric-note">3 shared multipliers; the target was 75%</dd>
+              </div>
+              <div>
+                <dt>Latency</dt>
+                <dd><strong>230,414</strong> <span class="metric-unit">cycles</span></dd>
+                <dd class="metric-note">≈4.61 ms per image at 50 MHz, confirmed in simulation</dd>
+              </div>
+              <div>
+                <dt>Throughput</dt>
+                <dd><strong>2 px</strong> <span class="metric-unit">/ 6 cycles</span></dd>
+                <dd class="metric-note">One even/odd RGB pair per common case</dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd><strong>2,407</strong> <span class="metric-unit">LEs</span></dd>
+                <dd class="metric-note">1,110 registers after Milestone 1, up from 616 / 369</dd>
+              </div>
+            </dl>
+          </article>
 
-        <div class="project-grid">
           <!-- Capstone (source: résumé) -->
           <article class="project" data-reveal aria-labelledby="proj-wildfire">
             <p class="project-kicker">Capstone · Sep 2025 – Apr 2026</p>
@@ -601,30 +591,32 @@
     </section>
 
     <!-- ============================== REFERENCES ============================== -->
-    <section class="section section-alt" id="references" aria-labelledby="references-title">
+    <section class="section" id="references" aria-labelledby="references-title">
       <div class="container">
         <header class="section-head" data-reveal>
           <h2 id="references-title">What managers say</h2>
         </header>
 
-        <figure class="testimonial" data-reveal>
-          <blockquote>
-            <p>"One of Yuvraj's most impressive achievements has been automating the invoicing process for Metrolinx. This initiative streamlined our workflow, drastically reduced manual errors, and improved the overall efficiency of our operations."</p>
-            <p>"Yuvraj's combination of technical expertise, project management skills, and leadership abilities make him an asset to any team."</p>
-          </blockquote>
-          <figcaption>
-            <span class="t-name">Hareet Basi</span>
-            <span class="t-role">Manager, Project Execution, Priority Transit · Toronto Hydro</span>
-          </figcaption>
-        </figure>
+        <div class="section-body">
+          <figure class="testimonial" data-reveal>
+            <blockquote>
+              <p>"One of Yuvraj's most impressive achievements has been automating the invoicing process for Metrolinx. This initiative streamlined our workflow, drastically reduced manual errors, and improved the overall efficiency of our operations."</p>
+              <p>"Yuvraj's combination of technical expertise, project management skills, and leadership abilities make him an asset to any team."</p>
+            </blockquote>
+            <figcaption>
+              <span class="t-name">Hareet Basi</span>
+              <span class="t-role">Manager, Project Execution, Priority Transit · Toronto Hydro</span>
+            </figcaption>
+          </figure>
 
-        <ul class="ref-stats" data-reveal aria-label="Highlights from the reference letter">
-          <li><strong>50+</strong><span>project closeouts managed</span></li>
-          <li><strong>$1M+</strong><span>combined project value</span></li>
-          <li><strong>3</strong><span>interns mentored over four months</span></li>
-        </ul>
-        <p class="ref-note muted">Full reference letter and contact details available on request.</p>
-        <!-- TODO: add more references or testimonials (e.g. JDRF or Recon) as you collect them. -->
+          <ul class="ref-stats" data-reveal aria-label="Highlights from the reference letter">
+            <li><strong>50+</strong><span>project closeouts managed</span></li>
+            <li><strong>$1M+</strong><span>combined project value</span></li>
+            <li><strong>3</strong><span>interns mentored over four months</span></li>
+          </ul>
+          <p class="ref-note muted">Full reference letter and contact details available on request.</p>
+          <!-- TODO: add more references or testimonials (e.g. JDRF or Recon) as you collect them. -->
+        </div>
       </div>
     </section>
 
@@ -635,7 +627,7 @@
           <h2 id="skills-title">Toolbox</h2>
         </header>
 
-        <div class="skills-grid">
+        <div class="section-body skills-list">
           <div class="skill-group" data-reveal>
             <h3>Languages</h3>
             <ul class="chips"><li>C</li><li>C++</li><li>C#</li><li>Python</li><li>SystemVerilog</li><li>VHDL</li><li>Java</li><li>SQL</li><li>JavaScript</li></ul>
@@ -669,14 +661,14 @@
     </section>
 
     <!-- ============================== COURSEWORK ============================== -->
-    <section class="section section-alt" id="coursework" aria-labelledby="coursework-title">
+    <section class="section" id="coursework" aria-labelledby="coursework-title">
       <div class="container">
         <header class="section-head" data-reveal>
           <h2 id="coursework-title">Academic highlights</h2>
           <p class="section-lede">Selected courses from the Computer Engineering &amp; Management program at McMaster University.</p>
         </header>
 
-        <div class="course-grid">
+        <div class="section-body course-list">
           <div class="course-group" data-reveal>
             <h3>Hardware &amp; digital systems</h3>
             <ul class="courses">
@@ -713,7 +705,7 @@
         </header>
 
         <!-- Photos are hot-linked from each publisher with credit. TODO: get permission or swap in your own photos before relying on these long-term. -->
-        <div class="press-grid">
+        <div class="section-body press-list">
           <article class="press-card" data-reveal aria-labelledby="press-oc">
             <figure class="press-media">
               <img src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/09/20220905006_em_272362670-w.jpg?quality=85&amp;strip=all&amp;w=640"
@@ -734,7 +726,7 @@
               <img src="https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-768x432.jpg"
                    srcset="https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-400x225.jpg 400w,
                            https://www.eng.mcmaster.ca//app/uploads/2024/01/Aug25_Commemorative-torch-WWII-canadian-remembrance-768x432.jpg 768w"
-                   sizes="(min-width: 1024px) 360px, (min-width: 700px) 50vw, 100vw"
+                   sizes="(min-width: 760px) 260px, 100vw"
                    width="768" height="432" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-fallback
                    alt="The commemorative torch made by McMaster Engineering students.">
               <figcaption>Image: McMaster Engineering</figcaption>
@@ -773,15 +765,19 @@
 
     <!-- ============================== CONTACT ============================== -->
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-inner" data-reveal>
-        <h2 id="contact-title">Let's build something</h2>
-        <p class="section-lede">I'm looking for full-time roles in embedded hardware, firmware and test engineering starting after December 2026. The fastest way to reach me is email.</p>
-        <ul class="contact-links">
-          <li><a class="btn btn-primary" href="mailto:yuvrajsandhu676@gmail.com">yuvrajsandhu676@gmail.com</a></li>
-          <li><a class="btn btn-ghost" href="https://github.com/Sandhuy" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
-          <!-- TODO: replace href with your LinkedIn profile URL. -->
-          <li><a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
-        </ul>
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 id="contact-title">Let's build something</h2>
+        </header>
+        <div class="section-body contact-inner" data-reveal>
+          <p class="section-lede">I'm looking for full-time roles in embedded hardware, firmware and test engineering starting after December 2026. The fastest way to reach me is email.</p>
+          <ul class="contact-links">
+            <li class="contact-email"><a href="mailto:yuvrajsandhu676@gmail.com">yuvrajsandhu676@gmail.com</a></li>
+            <li><a href="https://github.com/Sandhuy" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span> ↗</a></li>
+            <!-- TODO: replace href with your LinkedIn profile URL. -->
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span> ↗</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
