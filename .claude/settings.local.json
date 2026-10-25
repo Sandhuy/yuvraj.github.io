@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; Test-Path $edge; \\(Get-Command python -ErrorAction SilentlyContinue\\).Source)",
       "PowerShell(python -m http.server 8765 --bind 127.0.0.1)",
-      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; $s = \"C:\\\\Users\\\\Personal\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Personal-Documents-GitHub-yuvraj-github-io\\\\bb926114-7f85-446d-9f72-24ec709f702c\\\\scratchpad\"; & $edge --headless=new --disable-gpu --hide-scrollbars --window-size=1440,11000 --virtual-time-budget=6000 --screenshot=\"$s\\\\desk.png\" http://127.0.0.1:8765/ ; & $edge --headless=new --disable-gpu --hide-scrollbars --window-size=390,22000 --virtual-time-budget=6000 --screenshot=\"$s\\\\mobile.png\" http://127.0.0.1:8765/ ; Get-ChildItem $s)"
+      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; $s = \"C:\\\\Users\\\\Personal\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Personal-Documents-GitHub-yuvraj-github-io\\\\bb926114-7f85-446d-9f72-24ec709f702c\\\\scratchpad\"; & $edge --headless=new --disable-gpu --hide-scrollbars --window-size=1440,11000 --virtual-time-budget=6000 --screenshot=\"$s\\\\desk.png\" http://127.0.0.1:8765/ ; & $edge --headless=new --disable-gpu --hide-scrollbars --window-size=390,22000 --virtual-time-budget=6000 --screenshot=\"$s\\\\mobile.png\" http://127.0.0.1:8765/ ; Get-ChildItem $s)",
+      "PowerShell(git check-ignore -v assets/docs/Yuvraj_Sandhu_Resume.pdf)"
     ]
   }
 }
